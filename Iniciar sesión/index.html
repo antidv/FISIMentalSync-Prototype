@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .destacado {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff5733;
+        }
+    </style>
+    <script>
+        function mostrarOpciones() {
+            var opciones = document.getElementById("opciones");
+            opciones.style.display = "block";
+        }
+
+        function iniciarSesion(tipo) {
+            if (tipo === 'estudiante') {
+                alert('Iniciando sesión como estudiante...');
+                // Aquí puedes redirigir a la página de inicio de sesión de estudiantes o realizar otras acciones.
+            } else if (tipo === 'psicologo') {
+                alert('Iniciando sesión como psicólogo...');
+                // Aquí puedes redirigir a la página de inicio de sesión de psicólogos o realizar otras acciones.
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Bienvenido a <span class="destacado">FISIMentalSync</span></h1>
+    <button onclick="mostrarOpciones()">Iniciar Sesión</button>
+    <div id="opciones" style="display: none;">
+        <p>Por favor, selecciona tu tipo de usuario:</p>
+        <button onclick="iniciarSesion('estudiante')">Estudiante</button>
+        <button onclick="iniciarSesion('psicologo')">Psicólogo</button>
+    </div>
+</body>
+</html>
