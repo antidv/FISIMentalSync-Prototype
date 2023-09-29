@@ -1,0 +1,53 @@
+element.style {
+}
+*, .btn-next {
+    box-sizing: border-box;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before, input[type=checkbox], input[type=radio] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+user agent stylesheet
+head {
+    display: none;
+}
+body, html {
+    font-family: 'Open Sans',sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #e8eaf6;
+    font-family: "Open Sans";
+    font-size: 14px;
+    color: #656d78;
+    overflow-x: hidden;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before, input[type=checkbox], input[type=radio] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+*, :after, :before, input[type=checkbox], input[type=radio] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
