@@ -1,48 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Iniciar Sesión</title>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        
-        h1 {
-            color: #333;
-        }
-        
-        .destacado {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff5733;
-        }
-    </style>
-    <script>
-        function mostrarOpciones() {
-            var opciones = document.getElementById("opciones");
-            opciones.style.display = "block";
-        }
+<html lang="es">
 
-        function iniciarSesion(tipo) {
-            if (tipo === 'estudiante') {
-                alert('Iniciando sesión como estudiante...');
-                // Aquí puedes redirigir a la página de inicio de sesión de estudiantes o realizar otras acciones.
-            } else if (tipo === 'psicologo') {
-                alert('Iniciando sesión como psicólogo...');
-                // Aquí puedes redirigir a la página de inicio de sesión de psicólogos o realizar otras acciones.
-            }
-        }
-    </script>
+<head>
+    <title>FISIMentalSync</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Portal de UNAYOE">
+    <link rel="icon" href="images/icono.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Bienvenido a <span class="destacado">FISIMentalSync</span></h1>
-    <button onclick="mostrarOpciones()">Iniciar Sesión</button>
-    <div id="opciones" style="display: none;">
-        <p>Por favor, selecciona tu tipo de usuario:</p>
-        <button onclick="iniciarSesion('estudiante')">Estudiante</button>
-        <button onclick="iniciarSesion('psicologo')">Psicólogo</button>
-    </div>
+    <section class="inicio-sesion">
+        <header><h1>FISIMentalSync</h1></header>
+        <h2>Iniciar sesion</h2>
+        <input class="entrada" type = "text" name="correo" value="" placeholder="Usuario">
+        <input class="entrada" type="password" name="contrasena" value="" placeholder="Contraseña">
+        <input class="boton" type="submit" name="" value="Iniciar">
+        <p><a href="#">¿Problemas de inicio de sesión?</a></p>
+    </section>
 </body>
+
 </html>
