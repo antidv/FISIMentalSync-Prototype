@@ -1,39 +1,40 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-  
-  body{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff; /* Cambiar a un valor de color */
     display: flex;
     flex-direction: row;
-    align-items: left;
-  }
+    align-items: flex-start; 
+}
 
-  .nav {
+.nav {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start; 
     width: 300px;
-    height: parent;
+    height: 110vh;
     background-color: #131221;
-  }
-  .nav a {
+}
+
+.nav a {
     color: #D1D5FD;
     text-decoration: none;
     padding: 15px;
     margin-top: 15px;
     margin-left: 30px;
     margin-right: 30px;
-  }
+}
 
-  .tabla_info{
+.tabla_info {
     padding-top: 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: flex-start; /* Cambiado de "left" a "flex-start" */
     align-items: center;
 }
 
-.info_container{
+.info_container {
     background-color: #6f6fa1;
     text-align: left;
     border-radius: 10px;
@@ -42,7 +43,7 @@
     margin: 15px;
 }
 
-  .circle {
+.circle {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -51,34 +52,40 @@
     background-image: url("https://th.bing.com/th/id/OIG.OxqLmx_.cIGj2OEOocLP?pid=ImgGn&w=1024&h=1024&rs=1");
     background-size: cover;
     background-position: center;
-  }
-  .info {
+}
+
+.info {
     display: flex;
     flex-direction: column;
     margin: 50px;
     align-self: flex-end;
-  }
-  .info span {
+}
+
+.info span {
     font-size: 20px;
     color: white;
     margin-top: 25px;
-  }
-  .graph {
+}
+
+.graph {
     width: 400px;
     height: 300px;
     border: 5px solid white;
-  }
-  .box {
+}
+
+.box {
     width: 200px;
     height: 300px;
     border: 5px solid white;
     margin-left: 50px;
-  }
-  .box h3 {
+}
+
+.box h3 {
     color: white;
     text-align: center;
-  }
-  .box p {
+}
+
+.box p {
     color: white;
     padding: 10px;
-  }
+}

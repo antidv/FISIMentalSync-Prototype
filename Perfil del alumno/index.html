@@ -1,3 +1,7 @@
+<?php
+include 'datos.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,35 +16,46 @@
 </head>
 
 <body>
+
   <div class="nav">
     <a href="#">inicio</a>
     <a href="#">perfil</a>
     <a href="#">agendar cita</a>
   </div>
+
   <div class="container">
     <section class="foto_info_container">
+      <?php
+      while ($row = $result->fetch_assoc()) {
+      ?>
       <div class="tabla_info">
-
-          <div class="foto_perfil">
-            <div class="circle"></div>
+        <div class="foto_perfil">
+          <div class="circle" style="background-image: url('<?php echo htmlspecialchars($row['foto_url']); ?>');" alt="Foto de perfil"></div>
+          <hr class="img_sub">
+        </div>
+        <div class="info_container">
+          <div class="info">
+            <span>Nombre: <?php echo htmlspecialchars($row['nombre']); ?></span>
+            <span>Facultad: <?php echo htmlspecialchars($row['facultad']); ?></span>
+            <span>Escuela profesional: <?php echo htmlspecialchars($row['escuela_profesional']); ?></span>
           </div>
-
-          <div class="info_container">
-            <div class="info">
-              <span>Nombre: Juan Pérez</span>
-              <span>Facultad: Facultad de Ingeniería de Sistemas e Informática</span>
-              <span>Escuela profesional: Chistemas</span>
-            </div>
-          </div>
-
+        </div>
       </div>
-  </section>
-
-    <div class="graph"></div>
-    <div class="box">
-      <h3>Diagnóstico:</h3>
-      <p>textotextotextotextotexto</p>
-    </div>
+      <hr>
+      <section class="contenido">
+        <div class="graph">
+        </div>
+        <div class="box">
+          <h3>Diagnóstico:</h3>
+          <p><?php echo htmlspecialchars($row['diagnostico']); ?></p>
+        </div>
+      </section>
+      <?php
+      }
+      $result->free_result(); // Liberar los resultados después de usarlos
+      ?>
+    </section>
   </div>
 </body>
+
 </html>
