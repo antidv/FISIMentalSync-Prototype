@@ -5,7 +5,7 @@ $username = "root";
 $password = "ibarra06";
 $database = "universidad";
 
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($host, $username, $password, $database, $port);
 
 if ($conn->connect_error) {
     die("Conexión a la base de datos fallida: " . $conn->connect_error);

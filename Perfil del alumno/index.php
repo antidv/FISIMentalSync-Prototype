@@ -52,7 +52,7 @@ include 'datos.php';
       </section>
       <?php
       }
-      $result->free_result(); // Liberar los resultados después de usarlos
+      $result->free_result();
       ?>
     </section>
   </div>
