@@ -65,7 +65,30 @@
       </nav>
     </div>
     <main class="citas">
-      <h1>Seccion de citas</h1>
+      <h1>Reserva tu cita</h1>
+      <section class="menu-cita">
+        <div class="select-group">
+          <label for="psicologos">Psicólogo</label>
+          <select id="psicologos" name="psicologos">
+            <option value="" disabled selected>Seleccione un psicólogo</option>
+            <option value="psicologo1">Psicólogo 1</option>
+            <option value="psicologo2">Psicólogo 2</option>
+          </select>
+        </div>
+        <div class="select-group">
+          <label for="fecha-cita">Seleccione una fecha:</label>
+          <input type="date" id="fecha-cita" name="fechaCita">
+        </div>
+        <div class="select-group">
+          <label for="hora-cita">Seleccione una hora:</label>
+          <input type="time" id="hora-cita" name="horaCita">
+        </div>
+        <div class="contenido-boton">
+          <button class="boton-cita" type="submit">
+            Reservar
+          </button>
+        </div>
+      </section>
     </main>
   </div>
 </body>
