@@ -1,0 +1,24 @@
+@import './colors.css';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: 'Montserrat', Verdana, sans-serif, 'Helvetica Neue';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.contenedor-psicologos{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  height: 100vh;
+}
+
+.psicologos{
+  background-color: rgb(255, 255, 255);
+  padding: 5rem;
+}
