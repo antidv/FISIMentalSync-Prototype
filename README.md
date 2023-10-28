@@ -1,9 +1,7 @@
 # FISIMentalSync
-# Proyecto Procesos de Software
-
 
 Este proyecto consiste en el desarrollo de una aplicación web que será monitoreada por la UNAYOE (Unidad de Asesoría y Orientación al Estudiante), a fin de realizar
-un seguimiento de la salud mental de los alumnos de la FISI. 
+un seguimiento de la salud mental de los alumnos de la FISI (Facultad de Ingeniería de Sistemas e Informática de la UNMSM)
 
 Desarrolladores:
 
