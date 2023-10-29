@@ -22,11 +22,11 @@ Este proyecto consiste en el desarrollo de una aplicación web que será monitor
 
 ## Primer entregable
 
-[Enlace al primer entregable](https://docs.google.com/document/d/1nxe5npN9jG328WCrk6eEl5c7H6bUJegBnT4lYvLHuJE/edit)
+[->Primer entregable<-](https://docs.google.com/document/d/1nxe5npN9jG328WCrk6eEl5c7H6bUJegBnT4lYvLHuJE/edit)
 
 ## Segundo entregable
 
-[Enlace al segundo entregable](https://drive.google.com/drive/u/2/folders/1pF_DFl4HrKXa5oDZShVpN5MLUm24uO7K)
+[->Segundo entregable<-](https://drive.google.com/drive/u/2/folders/1pF_DFl4HrKXa5oDZShVpN5MLUm24uO7K)
 
 ## Requisitos para levantar el proyecto en su estado actual
 
@@ -64,7 +64,9 @@ Si tienes alguna pregunta o encuentras algún problema, no dudes en contactar a 
 
 ---
 
-![UNMSM](https://www.unmsm.edu.pe/assets/favicon.ico](https://upload.wikimedia.org/wikipedia/commons/b/be/UNMSM_escudo_XVI-XXI_transparente_siglas_nombre_vertical.svg)
+![UNMSM](https://www.unmsm.edu.pe/assets/favicon.ico](https://upload.wikimedia.org/wikipedia/commons/b/be/UNMSM_escudo_XVI-XXI_transparente_siglas_nombre_vertical.svg
+) 
+
 
 
 _Proyecto desarrollado en colaboración con la UNAYOE (La Unidad de Asesoría y Orientación al Estudiante)_
