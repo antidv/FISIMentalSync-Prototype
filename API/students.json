@@ -1,0 +1,22 @@
+{
+    
+    "usuarios": [
+        {
+            "correo": "juanperez@unmsm.edu.pe",
+            "contrasena": "password123"
+        },
+        {
+            "correo": "maria.garcia@unmsm.edu.pe",
+            "contrasena": "password456"
+        },
+        {
+            "correo": "pablo.perez@unmsm.edu.pe",
+            "contrasena": "password789"
+        },
+        {
+            "correo": "gabriel.uscamayta@unmsm.edu.pe",
+            "contrasena": "fisicraft123"
+
+        }
+    ]
+}

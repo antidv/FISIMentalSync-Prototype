@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Titulo -->
+  <title>Mi perfil - [psicologo]</title>
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="description" content="Perfil de psicologo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/barra-navegacion.css" />
+  <link rel="stylesheet" href="../css/perfil.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="contenedor-perfil">
+    <div class="barra-navegacion">
+      <div class="contenedor-logo">
+        <img class="logo-image" src="../images/logo2.png" alt="logo de FISIMentalSync">
+      </div>
+      <nav>
+        <ul class="contenedor-listas-nav">
+          <li class="grupo-lista-nav">
+            <a class="contenedor-enlaces" href="./perfil.html">
+              <span class="icon-nav"><i class="fa-regular fa-circle-user"></i></span>
+              <p class="text-bar">Mi perfil</p>
+            </a>
+          </li>
+          <li class="grupo-lista-nav">
+            <a class="contenedor-enlaces" href="./citas.html">
+              <span class="icon-nav"><i class="fa-regular fa-clock"></i></span>
+              <p class="text-bar">Reservar cita</p>
+            </a>
+          </li>
+          <li class="grupo-lista-nav">
+            <a class="contenedor-enlaces" href="./alumnos.html">
+              <span class="icon-nav"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <p class="text-bar">Ver Alumnos</p>
+            </a>
+          </li>
+          <li class="grupo-lista-nav">
+            <a class="contenedor-enlaces" href="./analiticas.html">
+              <span class="icon-nav"><i class="fa-solid fa-chart-line"></i></span>
+              <p class="text-bar">Analíticas</p>
+            </a>
+          </li>
+          <li class="grupo-lista-nav activo">
+            <a class="contenedor-enlaces" href="./informe-colectivo.html">
+              <span class="icon-nav"><i class="fas fa-pen-to-square"></i></span>
+              <p class="text-bar">Informe colectivo</p>
+            </a>
+          </li>
+          <li class="grupo-lista-nav">
+            <a class="contenedor-enlaces" href="../page-inicio/login.html">
+              <span class="icon-nav"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+              <p class="text-bar">Cerrar sesión</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main class="perfil">
+      <h1>Bienvenido [nombre]!</h1>
+      <h2>Mi información personal</h2>
+      <section class="contenedor-info">
+        <p class="texto-etiqueta">Alumno</p>
+        <p class="texto-info">Nombre Apellido</p>
+        <p class="texto-etiqueta">Estado</p>
+        <p class="texto-info">Regular</p>
+        <p class="texto-etiqueta">Patologia</p>
+        <a class="link-pop-up" href="#">
+          <p>Ver</p>
+        </a>
+        <p class="texto-etiqueta">Código</p>
+        <p class="texto-info">22200251</p>
+        <p class="texto-etiqueta">Promedio ponderado</p>
+        <p class="texto-info">10.49</p>
+        <p class="texto-etiqueta">Escuela profesional</p>
+        <p class="texto-info">Ingenieria de software</p>
+        <p class="texto-etiqueta">Reporte de matricula</p>
+        <a class="link-pop-up" href="#">
+          <p>Ver</p>
+        </a>
+      </section>
+      <h2>Calendario de citas</h2>
+      <table class="tabla-citas">
+        <thead>
+          <tr class="encabezado-tabla-citas">
+            <th>N°</th>
+            <th>Horario</th>
+            <th>Psicólogo</th>
+            <th>Asistencia</th>
+            <th>Diagnóstico</th>
+            <th>Satisfacción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="contenido-tabla-citas">
+            <td>1</td>
+            <td><a href="#">
+                <p>Ver</p>
+              </a></td>
+            <td>Nombre de psicólogo</td>
+            <td>Pendiente</td>
+            <td>Pendiente</td>
+            <td>0/5</td>
+          </tr>
+          <tr class="contenido-tabla-citas">
+            <td>1</td>
+            <td><a href="#">
+                <p>Ver</p>
+              </a></td>
+            <td>Nombre de psicólogo</td>
+            <td>Pendiente</td>
+            <td>Pendiente</td>
+            <td>0/5</td>
+          </tr>
+          <tr class="contenido-tabla-citas">
+            <td>1</td>
+            <td><a href="#">
+                <p>Ver</p>
+              </a></td>
+            <td>Nombre de psicólogo</td>
+            <td>Pendiente</td>
+            <td>Pendiente</td>
+            <td>0/5</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</body>
+
+</html>
