@@ -1,12 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// Importar los datos de los usuarios
-const users = require('./students.json');
+app.use(cors());
+
+const students = require('./students.json');
 
 app.get('/students', (req, res) => {
-  res.json(students);
+  res.json(students.usuarios);
 });
 
 app.listen(port, () => {
