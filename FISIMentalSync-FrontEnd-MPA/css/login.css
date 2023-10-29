@@ -1,0 +1,128 @@
+@import './colors.css';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: 'Montserrat', Verdana, sans-serif, 'Helvetica Neue';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: url(../images/FISI.jpeg) no-repeat center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-login {
+  min-height: 60%;
+  width: 80%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 0.45fr 0.55fr;
+  z-index: 2;
+}
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  max-height: 50%;
+  width: 75%;
+}
+
+.contenedor-form {
+  background-color: var(--neutral-50);
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.header-form{
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  color: var(--white-50);
+}
+
+.input-group{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.icon-input{
+  color: var(--secondary1-100);
+  font-size: clamp(1.2rem, 3vw, 3rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-user{
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary1-50);
+  color: var(--white-600);
+  width: 89%;
+  box-sizing: border-box;
+}
+
+.input-clave{
+  background-color: var(--secondary1-50);
+  color: var(--white-600);
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  padding: 0.5rem 1rem;
+  width: 89%;
+  box-sizing: border-box;
+}
+
+.boton-login{
+  background-color: var(--secondary1-300);
+  color: var(--neutral-50);
+  cursor: pointer;
+  width: 50%;
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.border, .boton-login{
+  border: none;
+  border-radius: 15px;
+  min-height: 10%;
+}
+
+::placeholder{
+  color: var(--white-600);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(131, 144, 250, 0.55);
+  z-index: 1;
+}
