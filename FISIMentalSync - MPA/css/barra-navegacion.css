@@ -1,0 +1,65 @@
+@import './colors.css';
+
+.barra-navegacion{
+  background-color: var(--neutral-500);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 35% 65%;
+  position: sticky;
+  top: 0;
+}
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  width: 60%;
+}
+
+.contenedor-listas-nav{
+  list-style: none;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(6, 15%);
+}
+
+.grupo-lista-nav, .grupo-lista-nav:hover{
+  min-width: 100%;
+  min-width: 100%;
+}
+
+.grupo-lista-nav:not(.activo):hover{
+  background-color: var(--white-600);
+}
+
+.contenedor-enlaces{
+  color: var(--secondary1-100);
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 10% 90%;
+  gap: 0.5rem;
+}
+
+.icon-nav, .text-bar{
+  font-size: clamp(0.8rem,1.5vw,1.2rem);
+}
+
+.activo{
+  background-color: var(--primary-200);
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}

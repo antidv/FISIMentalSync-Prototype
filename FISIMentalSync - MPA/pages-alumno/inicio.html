@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Titulo -->
+  <title>Mi perfil - [alumno]</title>
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="description" content="Perfil de alumno" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/App.css" />
+  <link rel="stylesheet" href="../css/barra-navegacion.css" />
+  <link rel="stylesheet" href="../css/inicio.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="App">
+    <main class="perfil">
+      <h1>Sección de inicio</h1>
+      <p>En este apartado se colocara noticias de unayoe y las evaluciones (inicial y semestral)</p>
+    </main>
+  </div>
+  <script type="module" src="../js/App-alumno.js"></script>
+  <script language="JavaScript">
+    document.addEventListener("DOMContentLoaded", function() {
+      const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(1)');
+      perfilLi.classList.add('activo');
+    });
+  </script>
+</body>
+
+</html>

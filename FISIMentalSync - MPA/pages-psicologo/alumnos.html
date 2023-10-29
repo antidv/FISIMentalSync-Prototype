@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Titulo -->
+  <title>Alumnos - [Psicologo]</title>
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="description" content="Ver alumnos" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/App.css" />
+  <link rel="stylesheet" href="../css/barra-navegacion.css" />
+  <link rel="stylesheet" href="../css/alumnos.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="App">
+    <main>
+      <h1>Buscar Alumnos</h1>
+      <form id="buscar-form">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre del alumno">
+        </div>
+
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido del alumno">
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Buscar</button>
+        </div>
+    </form>
+      <table class="tabla-alumnos">
+        <thead class="encabezado-tabla-alumnos">
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Escuela Profesional</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody class="contenido-tabla-alumnos">
+          <tr>
+            <td>Nombres</td>
+            <td>Apellidos</td>
+            <td>Escuela Profesional</td>
+            <td>Estado</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+  </div>
+  <script type="module" src="../js/App-psicologo.js"></script>
+  <script language="JavaScript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(3)');
+      perfilLi.classList.add('activo');
+    });
+  </script>
+</body>
+
+</html>
