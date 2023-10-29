@@ -14,8 +14,6 @@ var data = {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
 
-        
-
        var url = "http://localhost:3000/students";
         
         fetch(url, {
@@ -32,10 +30,10 @@ var data = {
             var userFound = data.find(user => user.correo === username && user.contrasena === password);
             if(userFound){
                 localStorage.setItem("token", "token");
-                window.location.href = "FISIMentalSync-Frontend/pages-alumno/perfil.html";
-            } else {
-                alert("Usuario o contraseña incorrectos");
-            }
+                window.location.href = "FISIMentalSync-Frontend/pages-alumno/perfil.html";} 
+
+            else {
+            alert("Usuario o contraseña incorrectos");}
         }).catch(function(error) {
             console.log(error);
         });
