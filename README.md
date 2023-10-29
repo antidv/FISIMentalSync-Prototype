@@ -42,7 +42,10 @@ La API necesaria para el funcionamiento de la aplicación se encuentra en la car
  node students.js
  ```
 4. Con la API iniciada, podrás acceder a la página web de la aplicación con normalidad y utilizar todas sus funcionalidades
+   
+5. Por el momento solo se reconoce el inicio de sesion de estudiantes, puedes encontrar los correos y contraseñas válidos en  API\students.json
 
+6. Para explorar el menu del psicologo debes cambiar en el buscador lo siguiente: FISIMentalSync-Frontend-MPA/pages-psicologo/perfil.html
 ## Desarrolladores
 
 - Jhon Franco Riddoutt Quiñones
