@@ -1,7 +1,6 @@
 # FISIMentalSync
 
 Este proyecto consiste en el desarrollo de una aplicación web que será monitoreada por la UNAYOE (Unidad de Asesoría y Orientación al Estudiante), a fin de realizar
-# FISIMentalSync
 
 ## Descripción
 
@@ -13,7 +12,7 @@ Este proyecto consiste en el desarrollo de una aplicación web que será monitor
 
 ## Segundo entregable
 
-[->Segundo entregable<-](https://drive.google.com/drive/u/2/folders/1pF_DFl4HrKXa5oDZShVpN5MLUm24uO7K)
+[->Segundo entregable<-](https://drive.google.com/drive/folders/1pF_DFl4HrKXa5oDZShVpN5MLUm24uO7K?usp=sharing)
 
 ## Requisitos para levantar el proyecto en su estado actual
 
