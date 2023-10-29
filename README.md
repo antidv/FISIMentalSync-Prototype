@@ -56,5 +56,19 @@ La API necesaria para el funcionamiento de la aplicación se encuentra en la car
  ```
 4. Con la API iniciada, podrás acceder a la página web de la aplicación con normalidad y utilizar todas sus funcionalidades
 
-¿Preguntas o Problemas?
-Si tienes alguna pregunta o encuentras algún problema, no dudes en contactar a cualquiera de los desarrolladores mencionados 
+## ¿Preguntas o Problemas?
+
+Si tienes alguna pregunta o encuentras algún problema, no dudes en contactar a cualquiera de los desarrolladores mencionados anteriormente. Estamos aquí para ayudarte.
+
+¡Gracias por utilizar FISIMentalSync!
+
+---
+
+![UNMSM](https://www.unmsm.edu.pe/assets/favicon.ico](https://upload.wikimedia.org/wikipedia/commons/b/be/UNMSM_escudo_XVI-XXI_transparente_siglas_nombre_vertical.svg)
+
+
+_Proyecto desarrollado en colaboración con la UNAYOE (La Unidad de Asesoría y Orientación al Estudiante)_
+
+![FISI](https://upload.wikimedia.org/wikipedia/commons/4/46/UNMSM_Facultad_de_Ingenier%C3%ADa_de_Sistemas_e_Inform%C3%A1tica_2019_-_Vista_lateral.jpg)
+
+_Proyecto desarrollado en colaboración con la Facultad de Ingeniería de Sistemas e Informática (FISI)_
