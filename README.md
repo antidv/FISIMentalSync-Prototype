@@ -28,4 +28,4 @@ App-psicologo.js:1
 Failed to load resource: net::ERR_FAILED
 perfil.html:85  Uncaught TypeError: Cannot read properties of null (reading 'classList')  at HTMLDocument.<anonymous> (perfil.html:85:16)` 
 
-Para manejarlo, se debe abrir los archivos desde un servidor local. Para manejarlo se empleo la extensión live server de vscode
+Para manejarlo, se debe abrir los archivos desde un servidor local. Para el proyecto, se esta usando la extensión live server de vscode.
