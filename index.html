@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Titulo -->
+  <title>FISIMentalSync</title>
+  <!-- Metadatos -->
+  <meta charset="utf-8" />
+  <meta name="description" content="Inicio de seción" />
+  <meta name="viewport" content="width=device-width" , initial-scale="1" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../FISIMentalSync-FrontEnd/css/login.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="contenedor-login">
+    <div class='contenedor-logo'>
+      <img class='logo-image' src="../FISIMentalSync-FrontEnd/images/logo.png" alt='Logo de FISIMentalSync' />
+    </div>
+    <div class="contenedor-form">
+      <form class="form" method="POST">
+        <header>
+          <h1 class="header-form">Bienvenido</h1>
+        </header>
+        <div class="input-group">
+          <span class="icon-input">
+            <i class="fa-regular fa-circle-user"></i>
+          </span>
+          <input class="input-user border" id="username" type="email" name="correo-institucional" placeholder="Correo institucional "
+            required />
+        </div>
+        <div class="input-group">
+          <span class="icon-input">
+            <i class="fa-regular fa-keyboard"></i>
+          </span>
+          <input class="input-clave border" id="password" type="password" name="contrasena" placeholder="Contraseña" required />
+        </div>
+        <button class="boton-login" type="submit" id="BotonLogin">
+          Iniciar sesión
+        </button>
+      </form>
+    </div>
+  </div>
+  <script src="FISIMentalSync-BackEnd/login.js"></script>
+</body>
+
+</html>
