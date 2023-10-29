@@ -16,3 +16,6 @@ Desarrolladores:
 - Gabriel Omar Uscamayta Sánchez
 - Miguel Angel Vera Alva
 
+Primer entregable: https://docs.google.com/document/d/1nxe5npN9jG328WCrk6eEl5c7H6bUJegBnT4lYvLHuJE/edit
+
+Segundo entregable: https://drive.google.com/drive/u/2/folders/1pF_DFl4HrKXa5oDZShVpN5MLUm24uO7K
