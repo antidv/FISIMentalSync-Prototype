@@ -64,8 +64,7 @@ Si tienes alguna pregunta o encuentras algún problema, no dudes en contactar a 
 
 ---
 
-![UNMSM](https://www.unmsm.edu.pe/assets/favicon.ico](https://upload.wikimedia.org/wikipedia/commons/b/be/UNMSM_escudo_XVI-XXI_transparente_siglas_nombre_vertical.svg
-) 
+[![UNMSM](https://upload.wikimedia.org/wikipedia/commons/b/be/UNMSM_escudo_XVI-XXI_transparente_siglas_nombre_vertical.svg)](https://www.unmsm.edu.pe)
 
 
 
