@@ -7,19 +7,6 @@ Este proyecto consiste en el desarrollo de una aplicación web que será monitor
 
 Este proyecto consiste en el desarrollo de una aplicación web que será monitoreada por la UNAYOE (Unidad de Asesoría y Orientación al Estudiante), con el objetivo de realizar un seguimiento de la salud mental de los alumnos de la FISI (Facultad de Ingeniería de Sistemas e Informática de la UNMSM).
 
-## Desarrolladores
-
-- Jhon Franco Riddoutt Quiñones
-- Ruth Camila Rojas Castañeda
-- Sebastián Alberto Rojas Rojas 
-- André Fabrizio Román Suyo
-- Jeremy Andrew Rosillo Ramirez
-- Braulio André Saldaña Alarcón
-- Sofía Fernanda Sarmiento Quispe
-- Richard Maycol Torres Rivera
-- Gabriel Omar Uscamayta Sánchez
-- Miguel Angel Vera Alva
-
 ## Primer entregable
 
 [->Primer entregable<-](https://docs.google.com/document/d/1nxe5npN9jG328WCrk6eEl5c7H6bUJegBnT4lYvLHuJE/edit)
@@ -55,6 +42,19 @@ La API necesaria para el funcionamiento de la aplicación se encuentra en la car
  node students.js
  ```
 4. Con la API iniciada, podrás acceder a la página web de la aplicación con normalidad y utilizar todas sus funcionalidades
+
+## Desarrolladores
+
+- Jhon Franco Riddoutt Quiñones
+- Ruth Camila Rojas Castañeda
+- Sebastián Alberto Rojas Rojas 
+- André Fabrizio Román Suyo
+- Jeremy Andrew Rosillo Ramirez
+- Braulio André Saldaña Alarcón
+- Sofía Fernanda Sarmiento Quispe
+- Richard Maycol Torres Rivera
+- Gabriel Omar Uscamayta Sánchez
+- Miguel Angel Vera Alva
 
 ## ¿Preguntas o Problemas?
 
