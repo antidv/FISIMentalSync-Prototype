@@ -1,19 +1,22 @@
 require('dotenv').config()
+const mysql = require('mysql2/promise');
 
-const mysql = require('mysql2')
+async function main() {
+    const connection = await mysql.createConnection(process.env.DATABASE_URL);
+    console.log('Connected to PlanetScale!');
+    
+    const createTableQuery = `
+        CREATE TABLE Usuarios (
+            id INT NOT NULL AUTO_INCREMENT,
+            name VARCHAR(1000),
+            PRIMARY KEY (id)
+        )
+    `;
+    
+    await connection.query(createTableQuery);
+    console.log('Table created successfully');
+    
+    connection.end();
+}
 
-// Create the connection to the database
-const connection = mysql.createConnection(process.env.DATABASE_URL)
-
-// simple query
-connection.query('show tables', function (err, results, fields) {
-  console.log(results) // results contains rows returned by server
-  console.log(fields) // fields contains extra metadata about results, if available
-})
-
-// Example with placeholders
-connection.query('select 1 from dual where ? = ?', [1, 1], function (err, results) {
-  console.log(results)
-})
-
-connection.end()
+main();
