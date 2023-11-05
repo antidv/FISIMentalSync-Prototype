@@ -35,7 +35,8 @@ async function main() {
             url_informe VARCHAR(1000),
             url_diagrama VARCHAR(1000),
             ciclo INT NOT NULL,
-            FOREIGN KEY (idAlumno) REFERENCES Alumno(idAlumno) ON DELETE CASCADE ON UPDATE CASCADE,
+            KEY idAlumno_idx (idAlumno),
+            CONSTRAINT 'IES_alumno_fk' FOREIGN KEY (idAlumno) REFERENCES Alumno(idAlumno) ON DELETE NO ACTION
         )
 
         CREATE TABLE Psicologo (
@@ -50,7 +51,8 @@ async function main() {
             idPsicologo INT NOT NULL,
             horario_inicio TIMESTAMP,
             horario_final TIMESTAMP,
-            FOREIGN KEY (idPsicologo) REFERENCES Psicologo(idPsicologo) ON DELETE CASCADE ON UPDATE CASCADE
+            KEY idePsicologo_idx (idPsicologo),
+            CONSTRAINT 'Horario_Psico_fk' FOREIGN KEY (idPsicologo) REFERENCES Psicologo(idPsicologo) ON DELETE NO ACTION
         )
 
         CREATE TABLE Cita (
@@ -61,8 +63,10 @@ async function main() {
             horario_final TIMESTAMP,
             grado_satisfaccion INT NOT NULL,
             ciclo INT NOT NULL,
-            FOREIGN KEY (idPsicologo) REFERENCES Psicologo(idPsicologo) ON DELETE CASCADE ON UPDATE CASCADE,
-            FOREIGN KEY (idAlumno) REFERENCES Alumno(idAlumno) ON DELETE CASCADE ON UPDATE CASCADE,
+            KEY idAlumno_idx (idAlumno),
+            CONSTRAINT 'Cita_alumno_fk' FOREIGN KEY (idAlumno) REFERENCES Alumno(idAlumno) ON DELETE NO ACTION,
+            KEY idePsicologo_idx (idPsicologo),
+            CONSTRAINT 'Cita_Psico_fk' FOREIGN KEY (idPsicologo) REFERENCES Psicologo(idPsicologo) ON DELETE NO ACTION
             PRIMARY KEY (idCita)
         )
 
@@ -71,8 +75,10 @@ async function main() {
             idAlumno INT NOT NULL,
             idPatologia INT NOT NULL,
             descripcion VARCHAR(1000),
-            FOREIGN KEY (idAlumno) REFERENCES Alumno(idAlumno) ON DELETE CASCADE ON UPDATE CASCADE,
-            FOREIGN KEY (idPatologia) REFERENCES Patologia(idPatologia) ON DELETE CASCADE ON UPDATE CASCADE,
+            KEY idAlumno_idx (idAlumno),
+            CONSTRAINT 'Diagnostico_alumno_fk' FOREIGN KEY (idAlumno) REFERENCES Alumno(idAlumno) ON DELETE NO ACTION,
+            KEY idPatologia_idx (idPatologia),
+            CONSTRAINT 'Diagnostico_patologia_fk' FOREIGN KEY (idPatologia) REFERENCES Patologia(idPatologia) ON DELETE NO ACTION,
             PRIMARY KEY (idDiagnostico)
         )
 
