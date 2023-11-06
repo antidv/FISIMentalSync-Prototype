@@ -12,15 +12,7 @@ connection.query('show tables', function (err, results, fields) {
 
 // Example with placeholders
 const createTableQuery = `
-CREATE TABLE Diagnosito (
-  idDiagnostico INT NOT NULL AUTO_INCREMENT,
-  idAlumno INT NOT NULL,
-  idPatologia INT NOT NULL,
-  descripcion VARCHAR(1000),
-  FOREIGN KEY (idAlumno) REFERENCES Alumno(idAlumno) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (idPatologia) REFERENCES Patologia(idPatologia) ON DELETE CASCADE ON UPDATE CASCADE,
-  PRIMARY KEY (idDiagnostico)
-`;
+/*Ya estan todas las tablas Bv*/`;
 
 connection.query(createTableQuery, function (err, results, fields) {
     if (err) throw err;
