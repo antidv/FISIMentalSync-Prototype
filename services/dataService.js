@@ -1,16 +1,11 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
+import mysql from 'mysql2/promise';
 
-const mysql = require('mysql2')
+dotenv.config();
 
-const connection = mysql.createConnection(process.env.DATABASE_URL)
-
-// simple query
-connection.query('show tables', function (err, results, fields) {
-  console.log(results) 
-  console.log(fields) 
-})
-
-
-
-
-connection.end()
+async function createConnection() {
+  const connection = await mysql.createConnection(process.env.DATABASE_URL);
+  return connection;
+ }
+ 
+ export default createConnection();
