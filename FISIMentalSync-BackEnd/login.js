@@ -1,6 +1,6 @@
 var data = {
     username: username,
-    password: password
+    password: password,
 };
    
     document.addEventListener("DOMContentLoaded", function() {
@@ -14,7 +14,7 @@ var data = {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
 
-       var url = "http://localhost:3000/students";
+        var url = "http://localhost:3000/students";
         
         fetch(url, {
             method: 'GET',
