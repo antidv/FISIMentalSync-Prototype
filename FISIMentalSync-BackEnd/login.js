@@ -1,3 +1,4 @@
+//Lógica login.js
 document.addEventListener("DOMContentLoaded", function() {
 
     var loginForm = document.getElementById("BotonLogin");

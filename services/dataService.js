@@ -1,3 +1,5 @@
+//Se puede importar a cualquier archivo colocar "import connection from '../services/dataService.js';"
+
 import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 
