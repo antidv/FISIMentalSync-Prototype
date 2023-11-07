@@ -43,10 +43,9 @@ app.get('/ping', async (req, res) => {
    });
 
 
-
-
-   app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+//Ruta del login , vean bien esta parte del parth, simplemente redirecciona al index.html 
+app.get('/login', (req, res) => {
+res.sendFile(path.join(__dirname, '../index.html'));
 });
 
 
