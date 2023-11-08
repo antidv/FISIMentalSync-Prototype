@@ -1,4 +1,5 @@
 //Lógica login.js
+
 document.addEventListener("DOMContentLoaded", function() {
 
     var loginForm = document.getElementById("BotonLogin");
@@ -31,9 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }).then(function(data) {
             if (data.success) {
-                // Almacena el correo electrónico en el almacenamiento local
                 localStorage.setItem("correo", username);
-                localStorage.setItem("token", data.token); // Asume que el token se devuelve en la respuesta
+                localStorage.setItem("token", data.token); 
                 if (data.role === 'Psicologo') {
                     window.location.href = "../FISIMentalSync-FrontEnd-MPA/pages-psicologo/perfil.html";
                 } else {

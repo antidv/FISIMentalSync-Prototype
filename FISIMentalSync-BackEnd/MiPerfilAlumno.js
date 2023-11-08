@@ -2,12 +2,11 @@ document.addEventListener("DOMContentLoaded", async function() {
   const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(2)');
   perfilLi.classList.add('activo');
  
-
   const correo = localStorage.getItem('correo');
+
   if (!correo) {
     console.error('El correo electrónico no está disponible');
-    return;
-  } 
+    return;} 
   
   fetch(`http://localhost:3000/alumno/${correo}`)
   .then(response => {
