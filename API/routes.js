@@ -7,15 +7,12 @@ import { fileURLToPath } from 'url';
 import connection from '../services/dataService.js';
 import cors from 'cors';
 
-
 const app = express()
 app.use(express.json());
 app.use(cors());
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 //Ruta de prueba para que vean cómo es la conexión con la base de datos con un query simple
 //Ignoren el nombre de la ruta, le puse ping porque es como un ping a la base de datos
@@ -88,6 +85,17 @@ app.get('/alumno/:correo', async (req, res) => {
   try {
     const connectionInstance = await connection;
     const [rows] = await connectionInstance.query('SELECT * FROM Alumno WHERE correo = ?', [req.params.correo]);
+    res.json(rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Hubo un error al ejecutar la consulta');
+  }
+});
+
+app.get('/psicologo/:correo', async (req, res) => {
+  try {
+    const connectionInstance = await connection;
+    const [rows] = await connectionInstance.query('SELECT nombre, correo, numero_telefono FROM Psicologo WHERE correo = ?', [req.params.correo]);
     res.json(rows[0]);
   } catch (err) {
     console.error(err);
