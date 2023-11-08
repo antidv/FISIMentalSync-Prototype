@@ -83,9 +83,19 @@ app.post('/login', async (req, res) => {
 });
 
 
-app.get('/estudiantes', (req, res) => res.send('Obteniendo estudiantes'))
+//Esto es para el perfil, pero se puede usar para las demás opciones
+app.get('/alumno/:correo', async (req, res) => {
+  try {
+    const connectionInstance = await connection;
+    const [rows] = await connectionInstance.query('SELECT * FROM Alumno WHERE correo = ?', [req.params.correo]);
+    res.json(rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Hubo un error al ejecutar la consulta');
+  }
+});
 
-app.post('/estudiantes', (req, res) => res.send('Creando estudiantes'))
+
 
 
 app.listen(3000)
