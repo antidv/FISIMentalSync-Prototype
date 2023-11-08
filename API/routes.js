@@ -56,7 +56,7 @@ app.get('/ping', async (req, res) => {
       }
     });
 
-//Ruta del login , vean bien esta parte del parth, simplemente redirecciona al index.html 
+//Ruta del login , vean bien esta parte del parth, simplemente redirecciona al index.html o el perfil del psicólogo
 app.get('/login', (req, res) => {
 res.sendFile(path.join(__dirname, '../index.html'));
 });
@@ -65,10 +65,13 @@ app.post('/login', async (req, res) => {
     try {
       const { correo, contrasena } = req.body;
       const connectionInstance = await connection;
-      const [rows] = await connectionInstance.query('SELECT * FROM Alumno WHERE correo = ? AND contrasena = ?', [correo, contrasena]);
-  
-      if (rows.length > 0) {
-        res.json({ success: true });
+      const [rowsAlumno] = await connectionInstance.query('SELECT * FROM Alumno WHERE correo = ? AND contrasena = ?', [correo, contrasena]);
+      const [rowsPsicologo] = await connectionInstance.query('SELECT * FROM Psicologo WHERE correo = ? AND contrasena = ?', [correo, contrasena]);
+
+      if (rowsAlumno.length > 0) {
+        res.json({ success: true, role: 'Alumno' });
+      } else if (rowsPsicologo.length > 0) {
+        res.json({ success: true, role: 'Psicologo' });
       } else {
         res.json({ success: false, message: 'Usuario o contraseña incorrectos' });
       }
@@ -76,6 +79,7 @@ app.post('/login', async (req, res) => {
       console.error(err);
       res.status(500).send('Hubo un error al ejecutar la consulta');
     }
+
 });
 
 
