@@ -1,9 +1,5 @@
-var data = {
-    username: username,
-    password: password
-};
-   
-    document.addEventListener("DOMContentLoaded", function() {
+//Lógica login.js
+document.addEventListener("DOMContentLoaded", function() {
 
     var loginForm = document.getElementById("BotonLogin");
 
@@ -14,28 +10,29 @@ var data = {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
 
-       var url = "http://localhost:3000/students";
+        var url = "http://localhost:3000/login";
         
         fetch(url, {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
+            body: JSON.stringify({
+                correo: username,
+                contrasena: password
+            }),
             mode: 'cors'
 
         }).then(function(response) {
-            return response.json();
-        }).then(function(data) {
-            console.log(data);
-            var userFound = data.find(user => user.correo === username && user.contrasena === password);
-            if(userFound){
+            if(response.ok) {
                 localStorage.setItem("token", "token");
-                window.location.href = "FISIMentalSync-Frontend-MPA/pages-alumno/inicio.html";} 
-
-            else {
-            alert("Usuario o contraseña incorrectos");}
+                window.location.href = "FISIMentalSync-Frontend-MPA/pages-alumno/inicio.html";
+            } else {
+                throw new Error('Usuario o contraseña incorrectos');
+            }
         }).catch(function(error) {
             console.log(error);
+            alert(error.message);
         });
 
     });

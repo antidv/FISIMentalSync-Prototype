@@ -1,3 +1,5 @@
+//Ignoren este documento, ya pronto se va a eliminar
+
 const express = require('express');
 const cors = require('cors');
 const app = express();

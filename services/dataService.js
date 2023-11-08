@@ -1,23 +1,13 @@
-require('dotenv').config()
+//Se puede importar a cualquier archivo colocar "import connection from '../services/dataService.js';"
 
-const mysql = require('mysql2')
+import dotenv from 'dotenv';
+import mysql from 'mysql2/promise';
 
-const connection = mysql.createConnection(process.env.DATABASE_URL)
+dotenv.config();
 
-// simple query
-connection.query('show tables', function (err, results, fields) {
-  console.log(results) 
-  console.log(fields) 
-})
-
-// Example with placeholders
-const createTableQuery = `
-/*Ya estan todas las tablas Bv*/`;
-
-connection.query(createTableQuery, function (err, results, fields) {
-    if (err) throw err;
-    console.log('Tabla creada exitosamente');
-});
-
-
-connection.end()
+async function createConnection() {
+  const connection = await mysql.createConnection(process.env.DATABASE_URL);
+  return connection;
+ }
+ 
+ export default createConnection();
