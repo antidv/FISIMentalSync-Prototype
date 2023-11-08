@@ -1,10 +1,10 @@
+//El fileURLToPath es para que no de problemas con el path
+//El cors es para que no de problemas con el fronted
+
 import  express  from "express"
 import path from 'path';
-//Esto es por políticas de seguridad xd
 import { fileURLToPath } from 'url';
-//Importo la conexión a la base de datos
 import connection from '../services/dataService.js';
-//Importo el cors para que no de problemas con el fronted
 import cors from 'cors';
 
 
@@ -23,9 +23,7 @@ const __dirname = path.dirname(__filename);
 app.get('/ping', async (req, res) => {
 
     try {
-
     //LEAN: Esto es para que no apliquen a sus rutas de cada parte backend/fronted
-
     //Se importa todo el coso de la base de datos (O sea la dirección, no sé por qué el coso lo ve como variable local xd)
 
     const connection = await import('../services/dataService.js');
@@ -43,11 +41,25 @@ app.get('/ping', async (req, res) => {
    });
 
 
+   app.get('/pong', async (req, res) => {
+  
+      try {
+      const connection = await import('../services/dataService.js');
+  
+      const connectionInstance = await connection.default;
+  
+      const [rows] = await connectionInstance.query('SELECT * FROM Psicologo');
+      res.json(rows[0]);
+      } catch (err) {
+      console.error(err);
+      res.status(500).send('Hubo un error al ejecutar la consulta');
+      }
+    });
+
 //Ruta del login , vean bien esta parte del parth, simplemente redirecciona al index.html 
 app.get('/login', (req, res) => {
 res.sendFile(path.join(__dirname, '../index.html'));
 });
-
 
 app.post('/login', async (req, res) => {
     try {
@@ -64,7 +76,7 @@ app.post('/login', async (req, res) => {
       console.error(err);
       res.status(500).send('Hubo un error al ejecutar la consulta');
     }
-  });
+});
 
 
 app.get('/estudiantes', (req, res) => res.send('Obteniendo estudiantes'))
