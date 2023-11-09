@@ -1,7 +1,7 @@
 //El fileURLToPath es para que no de problemas con el path
 //El cors es para que no de problemas con el fronted
 
-import  express  from "express"
+import express from "express"
 import path from 'path';
 import { fileURLToPath } from 'url';
 import connection from '../services/dataService.js';

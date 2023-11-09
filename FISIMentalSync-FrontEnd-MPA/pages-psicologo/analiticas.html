@@ -8,6 +8,8 @@
   <meta charset="utf-8">
   <meta name="description" content="Perfil de psicologo" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- JS -->
+  <script src="FISIMentalSync-FrontEnd-MPA/js/analiticas.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/App.css" />
   <link rel="stylesheet" href="../css/barra-navegacion.css" />
@@ -17,24 +19,258 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- Iconos -->
   <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+ <!-- Google Chart -->
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Patología', 'Cantidad de alumnos'],
+        ['Patología1',     11],
+        ['Patología2',      2],
+        ['Patología3',  2],
+        ['Patología3', 2],
+        ['Patología4',    7]
+      ]);
+
+      var options = {
+        title: 'Diagrama porcentual'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('patsoftpor'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Patología', 'Cantidad de alumnos'],
+        ['Patología1',     11],
+        ['Patología2',      2],
+        ['Patología3',  2],
+        ['Patología3', 2],
+        ['Patología4',    7]
+      ]);
+
+      var options = {
+        title: 'Diagrama porcentual'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('patsispor'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Patología', 'Cantidad de alumnos'],
+      ['Patología1',     11],
+      ['Patología2',      2],
+      ['Patología3',  2],
+      ['Patología3', 2],
+      ['Patología4',    7]
+    ]);
+
+    var options = {
+      title: 'Diagrama porcentual'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('patmesfisipor'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Patología', 'Cantidad de alumnos'],
+      ['Patología1',     11],
+      ['Patología2',      2],
+      ['Patología3',  2],
+      ['Patología3', 2],
+      ['Patología4',    7]
+    ]);
+
+    var options = {
+      title: 'Diagrama porcentual'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('citmespor'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2004',  1000,      400],
+      ['2005',  1170,      460],
+      ['2006',  660,       1120],
+      ['2007',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Histograma',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('patsofthist'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2004',  1000,      400],
+      ['2005',  1170,      460],
+      ['2006',  660,       1120],
+      ['2007',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Histograma',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('patsishist'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2004',  1000,      400],
+      ['2005',  1170,      460],
+      ['2006',  660,       1120],
+      ['2007',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Histograma',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('patmesfisihist'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2004',  1000,      400],
+      ['2005',  1170,      460],
+      ['2006',  660,       1120],
+      ['2007',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Histograma',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('citmeshist'));
+
+    chart.draw(data, options);
+  }
+</script>
 </head>
 
 <body>
   <div id="App">
     <main>
-      <h1>Seccion de analíticas</h1>
+      <h1>Analíticas</h1>
+
+      <div class="analytics">
+        <div class="stat">
+          <h4>Total estudiantes</h4>
+          <div class="stat-number">5 237</div>
+        </div>
+        <div class="stat">
+          <h4>Citas atendidas</h4>
+          <div class="stat-number">456</div>
+        </div>
+        <div class="stat">
+          <h4>Satisfacción promedio</h4>
+          <div class="stat-number">4</div>
+        </div>
+      </div>
+
       <div class="contenedor-cuadros">
         <div class="cuadro">
-          <h2 class="titulo">Cuadro 1</h2>
+          <h2 class="titulo">Patologías en Software</h2>
+          <div class="GoogleCharts">
+            <div class="Ggraph" id="patsoftpor"></div>
+            <div class="Ggraph" id="patsofthist"></div>
+          </div>
         </div>
         <div class="cuadro">
-          <h2 class="titulo">Cuadro 2</h2>
+          <h2 class="titulo">Patologías en Sistemas</h2>
+          <div class="GoogleCharts">
+            <div class="Ggraph" id="patsispor"></div>
+            <div class="Ggraph" id="patsishist"></div>
+          </div>
         </div>
         <div class="cuadro">
-          <h2 class="titulo">Cuadro 3</h2>
+          <h2 class="titulo">Patologías por mes</h2>
+          <div class="GoogleCharts">
+            <div class="Ggraph" id="patmesfisipor"></div>
+            <div class="Ggraph" id="patmesfisihist"></div>
+          </div>
         </div>
         <div class="cuadro">
-          <h2 class="titulo">Cuadro 4</h2>
+          <h2 class="titulo">Citas por mes</h2>
+          <div class="GoogleCharts">
+            <div class="Ggraph" id="citmespor"></div>
+            <div class="Ggraph" id="citmeshist"></div>
+          </div>
         </div>
       </div>
     </main>

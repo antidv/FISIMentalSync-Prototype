@@ -3,14 +3,71 @@
   flex-wrap: wrap;
 }
 
-.cuadro {
+/*.cuadro {
   width: 48%;
   margin: 1%;
   padding: 20px;
   background-color: #FF5733; 
   color: #2E2E2E; 
+}*/
+
+.GoogleCharts {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.Ggraph {
+  width: 450px; 
+  height: 250px;
+}
+.cuadro {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex-basis: calc(33.333% - 20px);
+}
+.titulo {
+  color: #5d578a;
+  background-color: #dcdcf9;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  border-radius: 20px 20px 20px 20px/ 50% 50% 50% 50%;
+  margin-bottom: 20px;
 }
 
-.titulo {
+.analytics {
+  display: flex;
+  justify-content: space-around; /* Cambio aquí para distribuir los elementos uniformemente */
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  margin: 0 auto; /* Esto centra el contenedor si tiene un ancho máximo */
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Cambio aquí para centrar el contenido en .stat */
+  flex-grow: 1; /* Hace que los elementos .stat crezcan y ocupen el espacio disponible */
+  background-color: #5d578a;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.stat h4 {
+  padding: 12px;
+  margin: 0; /* Asegúrate de que no haya margen adicional que afecte la alineación */
+  color: #dcdcf9;
+}
+
+.stat-number {
+  background-color: rgb(175, 219, 179);
+  color: rgb(72, 133, 80);
+  padding: 10px;
+  text-align: center;
+  min-width: 45px;
+  border-radius: 50%;
   font-size: 18px;
 }
