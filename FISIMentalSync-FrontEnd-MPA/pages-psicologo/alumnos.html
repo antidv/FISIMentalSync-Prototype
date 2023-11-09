@@ -23,49 +23,47 @@
   <div id="App">
     <main>
       <h1>Buscar Alumnos</h1>
-      <form id="buscar-form">
-        <div class="form-group">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre del alumno">
+      <form id="buscar-form" method="get">
+        <label for="alumno-nombre">Nombre:</label>
+        <input type="text" id="alumno-nombre" placeholder="Nombre del alumno">
+        <label for="alumno-apellido">Apellido:</label>
+        <input type="text" id="alumno-apellido" placeholder="Apellido del alumno">
+        <label for="alumno-correo">Correo:</label>
+        <input type="email" id="alumno-correo" placeholder="Correo del alumno" required>
+        <div id="boton-buscar-alumnos">
+          <button type="submit" id="BotonBuscarAlumnos">Buscar</button>
         </div>
-
-        <div class="form-group">
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Apellido del alumno">
-        </div>
-
-        <div class="form-group">
-            <button type="submit">Buscar</button>
-        </div>
-    </form>
+      </form>
       <table class="tabla-alumnos">
         <thead class="encabezado-tabla-alumnos">
           <tr>
             <th>Nombres</th>
-            <th>Apellidos</th>
+            <th>Sexo</th>
             <th>Escuela Profesional</th>
+            <th>Codigo</th>
             <th>Estado</th>
           </tr>
         </thead>
         <tbody class="contenido-tabla-alumnos">
           <tr>
-            <td>Nombres</td>
-            <td>Apellidos</td>
-            <td>Escuela Profesional</td>
-            <td>Estado</td>
+            <td id="nombre-alumno-tabla"></td>
+            <td id="sexo-alumno-tabla"></td>
+            <td id="escuela-alumno-tabla"></td>
+            <td id="codigo-alumno-tabla"></td>
+            <td id="estado-alumno-tabla"></td>
           </tr>
         </tbody>
       </table>
-
     </main>
   </div>
-  <script type="module" src="../js/App-psicologo.js"></script>
   <script language="JavaScript">
     document.addEventListener("DOMContentLoaded", function () {
       const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(3)');
       perfilLi.classList.add('activo');
     });
   </script>
+  <script type="module" src="../../FISIMentalSync-BackEnd/VerAlumnos.js"></script>
+  <script type="module" src="../js/App-psicologo.js"></script>
 </body>
 
 </html>
