@@ -22,14 +22,14 @@
 <body>
   <div id="App">
     <main class="perfil">
-      <h1>¡Bienvenido Nombre Apellido!</h1>
+      <h1 id="bienvenida">¡Bienvenido Nombre Apellido!</h1>
       <h2>Mi información personal</h2>
       <section class="contenedor-info">
         <p class="texto-etiqueta">Celular</p>
-        <p class="texto-info">912344873</p>
+        <p class="texto-info" id = 'Celular'>912344873</p>
         <p class="texto-etiqueta">Correo</p>
         <p class="texto-info" style="grid-column-start: 2;
-        grid-column-end: 5;">micorreo@gmail.com</p>
+        grid-column-end: 5;" id = 'Correo' >micorreo@gmail.com</p>
       </section>
       <h2>Calendario de citas</h2>
       <table class="tabla-citas">
@@ -79,6 +79,7 @@
     </main>
   </div>
   <script type="module" src="../js/App-psicologo.js"></script>
+  <script type="module" src="../../FISIMentalSync-BackEnd/MiPerfilPsicologo.js"></script>
   <script language="JavaScript">
     document.addEventListener("DOMContentLoaded", function() {
       const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(1)');

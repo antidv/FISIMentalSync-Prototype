@@ -22,23 +22,23 @@
 <body>
   <div id="App">
     <main class="perfil">
-      <h1>¡Bienvenido Nombre Apellido!</h1>
+      <h1 id="bienvenida">¡Bienvenido Nombre Apellido!</h1>
       <h2>Mi información personal</h2>
       <section class="contenedor-info">
         <p class="texto-etiqueta">Alumno</p>
-        <p class="texto-info">Nombre Apellido</p>
+        <p class="texto-info" id="nombre-apellido">Nombre Apellido</p>
         <p class="texto-etiqueta">Estado</p>
-        <p class="texto-info">Regular</p>
+        <p class="texto-info" id="estado">Regular</p>
         <p class="texto-etiqueta">Patologia</p>
         <a class="link-pop-up" href="#">
           <p>Ver</p>
         </a>
         <p class="texto-etiqueta">Código</p>
-        <p class="texto-info">22200251</p>
+        <p class="texto-info" id="codigo">22200251</p>
         <p class="texto-etiqueta">Promedio ponderado</p>
-        <p class="texto-info">10.49</p>
+        <p class="texto-info" id="promedio-ponderado">10.49</p>
         <p class="texto-etiqueta">Escuela profesional</p>
-        <p class="texto-info">Ingenieria de software</p>
+        <p class="texto-info" id="escuela-profesional">Ingenieria de software</p>
         <p class="texto-etiqueta">Reporte de matricula</p>
         <a class="link-pop-up" href="https://sum.unmsm.edu.pe/loginWebSum/login.htm" target="_blank">
           <p>Ver</p>
@@ -64,7 +64,7 @@
                 <p>Ver</p>
               </a>
             </td>
-            <td>Nombre de psicólogo</td>
+            <td id="nombre-psicologo">Nombre de psicólogo</td>
             <td>Pendiente</td>
             <td>Pendiente</td>
             <td>0/5</td>
@@ -73,13 +73,15 @@
       </table>
     </main>
   </div>
-  <script type="module" src="../js/App-alumno.js"></script>
   <script language="JavaScript">
     document.addEventListener("DOMContentLoaded", function() {
       const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(2)');
       perfilLi.classList.add('activo');
     });
   </script>
+  <script type="module" src="../../FISIMentalSync-BackEnd/MiPerfilAlumno.js"></script>
+  <script type="module" src="../js/App-alumno.js"></script>
 </body>
 
 </html>
+

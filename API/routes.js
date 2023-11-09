@@ -1,21 +1,18 @@
+//El fileURLToPath es para que no de problemas con el path
+//El cors es para que no de problemas con el fronted
+
 import  express  from "express"
 import path from 'path';
-//Esto es por políticas de seguridad xd
 import { fileURLToPath } from 'url';
-//Importo la conexión a la base de datos
 import connection from '../services/dataService.js';
-//Importo el cors para que no de problemas con el fronted
 import cors from 'cors';
-
 
 const app = express()
 app.use(express.json());
 app.use(cors());
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 
 //Ruta de prueba para que vean cómo es la conexión con la base de datos con un query simple
 //Ignoren el nombre de la ruta, le puse ping porque es como un ping a la base de datos
@@ -23,9 +20,7 @@ const __dirname = path.dirname(__filename);
 app.get('/ping', async (req, res) => {
 
     try {
-
     //LEAN: Esto es para que no apliquen a sus rutas de cada parte backend/fronted
-
     //Se importa todo el coso de la base de datos (O sea la dirección, no sé por qué el coso lo ve como variable local xd)
 
     const connection = await import('../services/dataService.js');
@@ -43,20 +38,37 @@ app.get('/ping', async (req, res) => {
    });
 
 
-//Ruta del login , vean bien esta parte del parth, simplemente redirecciona al index.html 
+   app.get('/pong', async (req, res) => {
+  
+      try {
+      const connection = await import('../services/dataService.js');
+  
+      const connectionInstance = await connection.default;
+  
+      const [rows] = await connectionInstance.query('SELECT * FROM Psicologo');
+      res.json(rows[0]);
+      } catch (err) {
+      console.error(err);
+      res.status(500).send('Hubo un error al ejecutar la consulta');
+      }
+    });
+
+//Ruta del login , vean bien esta parte del parth, simplemente redirecciona al index.html o el perfil del psicólogo
 app.get('/login', (req, res) => {
 res.sendFile(path.join(__dirname, '../index.html'));
 });
-
 
 app.post('/login', async (req, res) => {
     try {
       const { correo, contrasena } = req.body;
       const connectionInstance = await connection;
-      const [rows] = await connectionInstance.query('SELECT * FROM Alumno WHERE correo = ? AND contrasena = ?', [correo, contrasena]);
-  
-      if (rows.length > 0) {
-        res.json({ success: true });
+      const [rowsAlumno] = await connectionInstance.query('SELECT * FROM Alumno WHERE correo = ? AND contrasena = ?', [correo, contrasena]);
+      const [rowsPsicologo] = await connectionInstance.query('SELECT * FROM Psicologo WHERE correo = ? AND contrasena = ?', [correo, contrasena]);
+
+      if (rowsAlumno.length > 0) {
+        res.json({ success: true, role: 'Alumno' });
+      } else if (rowsPsicologo.length > 0) {
+        res.json({ success: true, role: 'Psicologo' });
       } else {
         res.json({ success: false, message: 'Usuario o contraseña incorrectos' });
       }
@@ -64,12 +76,34 @@ app.post('/login', async (req, res) => {
       console.error(err);
       res.status(500).send('Hubo un error al ejecutar la consulta');
     }
-  });
+
+});
 
 
-app.get('/estudiantes', (req, res) => res.send('Obteniendo estudiantes'))
+//Esto es para el perfil, pero se puede usar para las demás opciones
+app.get('/alumno/:correo', async (req, res) => {
+  try {
+    const connectionInstance = await connection;
+    const [rows] = await connectionInstance.query('SELECT * FROM Alumno WHERE correo = ?', [req.params.correo]);
+    res.json(rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Hubo un error al ejecutar la consulta');
+  }
+});
 
-app.post('/estudiantes', (req, res) => res.send('Creando estudiantes'))
+app.get('/psicologo/:correo', async (req, res) => {
+  try {
+    const connectionInstance = await connection;
+    const [rows] = await connectionInstance.query('SELECT nombre, correo, numero_telefono FROM Psicologo WHERE correo = ?', [req.params.correo]);
+    res.json(rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Hubo un error al ejecutar la consulta');
+  }
+});
+
+
 
 
 app.listen(3000)
