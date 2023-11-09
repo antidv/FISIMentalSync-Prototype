@@ -1,42 +1,52 @@
-var data = {
-    username: username,
-    password: password
-};
-   
-    document.addEventListener("DOMContentLoaded", function() {
+//Lógica login.js
+
+document.addEventListener("DOMContentLoaded", function() {
 
     var loginForm = document.getElementById("BotonLogin");
-
+  
     loginForm.addEventListener("click", function(event) {
-
+  
         event.preventDefault();
-
+  
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
-
-       var url = "http://localhost:3000/students";
+      
+        var url = "http://localhost:3000/login";
         
         fetch(url, {
-            method: 'GET',
+            method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json' // Corregido aquí
             },
+            body: JSON.stringify({
+                correo: username,
+                contrasena: password
+            }),
             mode: 'cors'
-
+  
         }).then(function(response) {
-            return response.json();
+            if(response.ok) {
+                return response.json(); 
+            } else {
+                throw new Error('Usuario o contraseña incorrectos');
+            }
         }).then(function(data) {
-            console.log(data);
-            var userFound = data.find(user => user.correo === username && user.contrasena === password);
-            if(userFound){
-                localStorage.setItem("token", "token");
-                window.location.href = "FISIMentalSync-Frontend-MPA/pages-alumno/inicio.html";} 
-
-            else {
-            alert("Usuario o contraseña incorrectos");}
+            if (data.success) {
+                localStorage.setItem("correo", username);
+                localStorage.setItem("token", data.token); 
+                if (data.role === 'Psicologo') {
+                    window.location.href = "../FISIMentalSync-FrontEnd-MPA/pages-psicologo/perfil.html";
+                } else {
+                    window.location.href = "../FISIMentalSync-FrontEnd-MPA/pages-alumno/inicio.html";
+                }
+            } else {
+                alert(data.message);
+            }
         }).catch(function(error) {
             console.log(error);
+            alert(error.message);
         });
-
+  
     });
-});
+  });
+  
