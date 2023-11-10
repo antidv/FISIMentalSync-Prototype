@@ -10,4 +10,4 @@ async function createConnection() {
   return connection;
  }
  
- export default createConnection;
+ export default createConnection();

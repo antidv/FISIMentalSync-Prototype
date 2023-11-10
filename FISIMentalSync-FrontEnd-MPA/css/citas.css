@@ -26,7 +26,7 @@ label{
   color: var(--neutral-500);
 }
 
-#psicologos, #fecha-cita, #hora-cita{
+#psicologos, #fecha-cita, #hora-cita, #motivo-cita{
   padding: 0.5rem 1rem;
   border-radius: 10px;
   background-color: var(--secondary1-50);

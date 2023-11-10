@@ -4,7 +4,7 @@
 <head>
   <!-- Titulo -->
   <title>Citas - [alumno]</title>
-  <!-- MEtadatos -->
+  <!-- Metadatos -->
   <meta charset="utf-8">
   <meta name="description" content="Citas - alumno" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +23,7 @@
   <div id="App">
     <main class="citas">
       <h1>Reserva tu cita</h1>
+
       <section class="menu-cita">
         <div class="select-group">
           <label for="psicologos">Psicólogo</label>
@@ -32,14 +33,53 @@
             <option value="psicologo2">Psicólogo 2</option>
           </select>
         </div>
+
+        <div class="select-group">
+          <label for="motivo-cita">Motivo de la cita</label>
+          <select id="motivo-cita" name="motivoCita">
+            <option value="" disabled selected>Seleccione un motivo</option>
+            <option value="Falta de concentración">Falta de concentración</option>
+            <option value="Problemas de lenguaje">Problemas de lenguaje</option>
+            <option value="Estilos de aprendizaje">Estilos de aprendizaje</option>
+            <option value="Desmotivación por crisis vocacional">Desmotivación por crisis vocacional</option>
+            <option value="Problemas de conducta">Problemas de conducta</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
         <div class="select-group">
           <label for="fecha-cita">Seleccione una fecha:</label>
           <input type="date" id="fecha-cita" name="fechaCita">
         </div>
+        
         <div class="select-group">
           <label for="hora-cita">Seleccione una hora:</label>
-          <input type="time" id="hora-cita" name="horaCita">
+          <select id="hora-cita" name="horaCita">
+            <option value="" disabled selected>Seleccione un horario</option>
+            <option value="08:00">8:00 am  - 8:45 am</option>
+            <option value="09:00">9:00 am - 9:45 am</option>
+            <option value="10:00">10:00 am - 10:45 am</option>
+            <option value="11:00">11:00 am - 11:45 am</option>
+            <option value="14:00">2:00 am - 2:45 am</option>
+            <option value="15:00">3:00 am - 3:45 am</option>
+          </select>
         </div>
+
+        <div class="select-group">
+          <label>Nivel de prioridad:</label>
+          <div>
+            <input type="radio" id="prioridad1" name="prioridad" value="1">
+            <label for="prioridad1">1</label>
+            <input type="radio" id="prioridad2" name="prioridad" value="2">
+            <label for="prioridad2">2</label>
+            <input type="radio" id="prioridad3" name="prioridad" value="3">
+            <label for="prioridad3">3</label>
+            <input type="radio" id="prioridad4" name="prioridad" value="4">
+            <label for="prioridad4">4</label>
+            <input type="radio" id="prioridad5" name="prioridad" value="5">
+            <label for="prioridad5">5</label>
+          </div>
+        <br>
         <div class="contenido-boton">
           <button class="boton-cita" type="submit">
             Reservar

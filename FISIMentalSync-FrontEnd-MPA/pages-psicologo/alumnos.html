@@ -24,14 +24,27 @@
     <main>
       <h1>Buscar Alumnos</h1>
       <form id="buscar-form" method="get">
+
         <label for="alumno-nombre">Nombre:</label>
         <input type="text" id="alumno-nombre" placeholder="Nombre del alumno">
         <label for="alumno-apellido">Apellido:</label>
         <input type="text" id="alumno-apellido" placeholder="Apellido del alumno">
         <label for="alumno-correo">Correo:</label>
         <input type="email" id="alumno-correo" placeholder="Correo del alumno" required>
-        <div id="boton-buscar-alumnos">
-          <button type="submit" id="BotonBuscarAlumnos">Buscar</button>
+
+        <!--Agregado recientemente-->
+        <label for="Codigo">Codigo:</label>
+        <input type="text" id="alumno-codigo" placeholder="Codigo del alumno">
+
+        <label for="alumno-escuela">Escuela</label>
+        <select id="alumno-escuela" class="input-field" name="Escuela del alumno">
+        <option value="" disabled selected>Seleccione una escuela</option>
+        <option value="Software">Software</option>
+        <option value="Sistemas">Sistemas</option>
+        
+        </select>
+        <div id="boton-buscar-alumnos">    
+       <button type="submit" id="BotonBuscarAlumnos">Buscar</button>
         </div>
       </form>
       <table class="tabla-alumnos">
