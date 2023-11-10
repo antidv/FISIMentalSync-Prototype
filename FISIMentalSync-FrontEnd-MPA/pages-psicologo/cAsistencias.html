@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Titulo -->
+  <title>Mi perfil - [psicologo]</title>
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="description" content="Perfil de psicologo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/App.css" />
+  <link rel="stylesheet" href="../css/barra-navegacion.css" />
+  <link rel="stylesheet" href="../css/cAsistencias.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="App">
+    <main>
+      <h1>Sección de cAsistencias</h1>
+      <div class="contenedor-cuadros">
+        <div class="cuadro">
+          <h2 class="titulo">Cuadro 1</h2>
+        </div>
+        <div class="cuadro">
+          <h2 class="titulo">Cuadro 2</h2>
+        </div>
+        <div class="cuadro">
+          <h2 class="titulo">Cuadro 3</h2>
+        </div>
+        <div class="cuadro">
+          <h2 class="titulo">Cuadro 4</h2>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="../js/App-psicologo.js"></script>
+  <script language="JavaScript">
+    document.addEventListener("DOMContentLoaded", function() {
+      const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(5)');
+      perfilLi.classList.add('activo');
+    });
+  </script>
+</body>
+
+</html>

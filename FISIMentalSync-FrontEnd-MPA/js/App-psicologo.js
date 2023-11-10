@@ -6,7 +6,7 @@ const grupos = [
   { enlace: './citas.html', icon: 'fa-regular fa-clock', texto: 'Reservar Cita' },
   { enlace: './alumnos.html', icon: 'fa-solid fa-magnifying-glass', texto: 'Ver Alumnos' },
   { enlace: './analiticas.html', icon: 'fa-solid fa-chart-line', texto: 'Analiticas' },
-  { enlace: './informe-colectivo.html', icon: 'fa-regular fa-file-lines', texto: 'Informe Colectivo' },
+  { enlace: './cAsistencias.html', icon: 'fa-regular fa-file-lines', texto: 'Conteo de asistencias' },
   { enlace: '../../index.html', icon: 'fa-solid fa-arrow-right-from-bracket', texto: 'Cerrar sesión' }
 ];
 
