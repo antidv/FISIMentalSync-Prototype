@@ -4,7 +4,7 @@
 import express from "express"
 import path from 'path';
 import { fileURLToPath } from 'url';
-import connection from '../services/dataService.js';
+import connection from './dataService.js';
 import cors from 'cors';
 
 const app = express()
@@ -23,7 +23,7 @@ app.get('/ping', async (req, res) => {
     //LEAN: Esto es para que no apliquen a sus rutas de cada parte backend/fronted
     //Se importa todo el coso de la base de datos (O sea la dirección, no sé por qué el coso lo ve como variable local xd)
 
-    const connection = await import('../services/dataService.js');
+    const connection = await import('./dataService.js');
     //Se crea la conexión
 
     const connectionInstance = await connection.default;
@@ -41,7 +41,7 @@ app.get('/ping', async (req, res) => {
    app.get('/pong', async (req, res) => {
   
       try {
-      const connection = await import('../services/dataService.js');
+      const connection = await import('./dataService.js');
   
       const connectionInstance = await connection.default;
   
