@@ -77,14 +77,6 @@ h2{
   height: 4rem;
 }
 
-.encabezado-tablaA {
-  color: var(--secondary1-200);
-  text-align: center;
-  height: 4rem;
-}
-
-
-
 th {
   border-bottom: 2px solid var(--secondary1-300); 
 }
