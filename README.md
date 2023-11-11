@@ -16,17 +16,27 @@ Este proyecto consiste en el desarrollo de una aplicación web que será monitor
 
 ## Requisitos para levantar el proyecto en su estado actual
 
-- **Nota:** Al acceder a los archivos de la carpeta "FISIMentalSync - MPA," la consola del navegador puede mostrar el siguiente error debido a la política de CORS:
-Access to script at 'file:///C:/Users/HP/Documents/Programaci%C3%B3n/Web/FISIMentalSync%20-%20MPA/js/App-psicologo.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, isolated-app, chrome-extension, chrome-untrusted, https, edge.
-App-psicologo.js:1
-Failed to load resource: net::ERR_FAILED
-perfil.html:85 Uncaught TypeError: Cannot read properties of null (reading 'classList') at HTMLDocument.<anonymous> (perfil.html:85:16)
+Asegúrate de tener instalados estos elementos:
 
-Para resolver este problema, se debe abrir los archivos desde un servidor local. Se recomienda utilizar la extensión "Live Server" de Visual Studio Code.
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/)
+- Extensión "Live Server" para Visual Studio Code
+- Extensión "Code Runner" (opcional)
 
-- Para iniciar la página web, abre el archivo "index.html" que se encuentra en la raíz del proyecto.
+## Cómo Iniciar
 
-- **Opcional pero recomendado:** Utiliza la extensión "Live Server" de Visual Studio Code para asegurarte de que la página se muestre correctamente y las interacciones funcionen sin problemas.
+1. Clona este repositorio y abre Visual Studio Code en la carpeta clonada.
+2. En la carpeta "API," ejecuta "routes.js" con Node.js usando la terminal:
+    ```bash
+    node routes.js
+    ```
+   O utiliza la extensión "Code Runner."
+3. Con la API en ejecución (puerto 3000), abre "index.html" en la raíz del proyecto.
+4. Utiliza la extensión "Live Server" para visualizar la página sin problemas.
+
+## Nota Importante
+
+Si encuentras errores CORS al acceder a archivos en "FISIMentalSync - MPA," úsalos con un servidor local, preferiblemente "Live Server" de Visual Studio Code.
 
 ### Iniciar la API
 
@@ -34,17 +44,15 @@ La API necesaria para el funcionamiento de la aplicación se encuentra en la car
 
 1. Asegúrate de tener Node.js instalado en tu sistema. Si no lo tienes, puedes descargarlo desde [la página oficial de Node.js](https://nodejs.org/).
 
-2. Abre una consola de Node.js en la carpeta mencionada ("Unayoe/FISIMentalSync/API"). Puedes hacerlo desde la consola de comandos de tu sistema o desde la terminal de Visual Studio Code.
+2. Abre una consola de Node.js en la carpeta mencionada ("../FISIMentalSync/API"). Puedes hacerlo desde la consola de comandos de tu sistema o desde la terminal de Visual Studio Code.
 
 3. Ejecuta el siguiente comando para iniciar la API:
+   
  ```bash
- node students.js
+ node routes.js
  ```
 4. Con la API iniciada, podrás acceder a la página web de la aplicación con normalidad y utilizar todas sus funcionalidades
    
-5. Por el momento solo se reconoce el inicio de sesion de estudiantes, puedes encontrar los correos y contraseñas válidos en  API\students.json
-
-6. Para explorar el menu del psicologo debes cambiar en el buscador lo siguiente: FISIMentalSync-Frontend-MPA/pages-psicologo/perfil.html
 ## Desarrolladores
 
 - Jhon Franco Riddoutt Quiñones
