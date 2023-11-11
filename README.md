@@ -2,6 +2,12 @@
 
 Este proyecto consiste en el desarrollo de una aplicación web que será monitoreada por la UNAYOE (Unidad de Asesoría y Orientación al Estudiante), a fin de realizar
 
+## Actualizaciones Beta 1.0
+
+- **Agregado sistema de login para alumnos y psicólogos.**
+- **Mejora:** Ahora se muestra información en los apartados de "Mi Perfil" tanto para alumnos como para psicólogos.
+- **Añadido el apartado de analíticas.**
+
 ## Descripción
 
 Este proyecto consiste en el desarrollo de una aplicación web que será monitoreada por la UNAYOE (Unidad de Asesoría y Orientación al Estudiante), con el objetivo de realizar un seguimiento de la salud mental de los alumnos de la FISI (Facultad de Ingeniería de Sistemas e Informática de la UNMSM).
@@ -27,12 +33,13 @@ Asegúrate de tener instalados estos elementos:
 
 1. Clona este repositorio y abre Visual Studio Code en la carpeta clonada.
 2. En la carpeta "API," ejecuta "routes.js" con Node.js usando la terminal:
+   
     ```bash
     node routes.js
     ```
    O utiliza la extensión "Code Runner."
-3. Con la API en ejecución (puerto 3000), abre "index.html" en la raíz del proyecto.
-4. Utiliza la extensión "Live Server" para visualizar la página sin problemas.
+4. Con la API en ejecución (puerto 3000), abre "index.html" en la raíz del proyecto.
+5. Utiliza la extensión "Live Server" para visualizar la página sin problemas.
 
 ## Nota Importante
 
