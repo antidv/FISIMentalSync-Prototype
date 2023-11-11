@@ -15,6 +15,18 @@
   height: 300px;
 }
 
+.menu-actividades{
+
+    display: grid;
+    gap: 1rem;
+    border: 3px solid var(--neutral-300);
+    border-radius: 30px;
+    padding: 1rem;
+    height: 350px;
+    margin-top: 100px; /* Ajusta el valor según tus necesidades */
+
+}
+
 .select-group{
   display: grid;
   grid-template-columns: 20% 80%;

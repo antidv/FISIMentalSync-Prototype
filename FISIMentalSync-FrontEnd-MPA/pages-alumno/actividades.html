@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Actividades - [alumno]</title>
+      <!-- Metadatos -->
+      <meta charset="utf-8">
+      <meta name="description" content="Citas - alumno" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- CSS -->
+      <link rel="stylesheet" href="../css/App.css" />
+      <link rel="stylesheet" href="../css/barra-navegacion.css" />
+      <link rel="stylesheet" href="../css/citas.css" />
+        <!-- Fuentes -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Iconos -->
+      <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+      </head>
+<body>
+    <div id="App">
+      <main class="perfil">
+        <h1 id="bienvenida">¡Bienvenido Nombre Apellido!</h1>
+
+<section class="TextEvaluacion">
+  <p class="Evaluaciones">Evaluaciones</p>
+</section>
+
+<!--Seccion evaluaciones-->
+
+<section class="contenedor-info">
+  <p class ="contenedor-info">Evaluacion inicial</p>
+  <p class ="contenedor-info">Evaluacion semestral</p>
+</section>
+  
+<!--Seccion links pop-up-->
+
+<section class = "LinksEvaluaciones">
+
+  <a class="link-pop-up" href="#">
+    <p>Ver</p>
+  </a>
+
+  <a class="link-pop-up" href="#">
+    <p>Ver</p>
+  </a>
+</section>
+
+<!--Sección texto calendarios-->
+
+<section class = "TextCalendarios">
+
+  <p class="Calendarios">Calendarios de citas pendientes</p>    
+
+</section>
+
+<!--Tablas -->
+<section>
+<table class="menu-actividades">
+  <thead>
+    <tr class="encabezado-tabla-citas">
+      <th>N°</th>
+      <th>Horario</th>
+      <th>Psicólogo</th>
+      <th>Asistencia</th>
+      <th>Detalles de la cita</th>
+      <th>Satisfacción</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="encabezado-tablaA">
+      <td>1</td>
+      <td>
+        <a class="link-pop-up2" href="#">
+          <p>Ver</p>
+        </a>
+      </td>
+      <td id="nombre-psicologo">Nombre de psicólogo</td>
+      <td>Pendiente</td>
+      <td>Pendiente</td>
+      <td>.../5</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+
+</main>      
+</body>
+<script type="module" src="../js/App-alumno.js"></script>
+  <script language="JavaScript">
+    document.addEventListener("DOMContentLoaded", function() {
+      const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(3)');
+      perfilLi.classList.add('activo');
+    });
+    </script>
+   <script type="module" src="../../FISIMentalSync-BackEnd/Actividades.js"></script>
+   <script type="module" src="../js/App-alumno.js"></script>
+</html>

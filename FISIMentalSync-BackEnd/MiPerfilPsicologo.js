@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       if (data) {
         try {
           const jsonData = JSON.parse(data); // Intenta analizar los datos como JSON
-          document.querySelector('#bienvenida').textContent = `¡Bienvenido ${jsonData.nombre}`;
+          document.querySelector('#bienvenida').textContent = `¡Bienvenido(a), ${jsonData.nombre}`;
           document.querySelector('#Correo').textContent = `${jsonData.correo}`;
           document.querySelector('#Celular').textContent = `${jsonData.numero_telefono}`;
 
