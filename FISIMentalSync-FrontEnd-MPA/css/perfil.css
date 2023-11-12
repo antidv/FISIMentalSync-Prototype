@@ -109,3 +109,7 @@ td > a {
 .fondo-pop-up.active{
   visibility: visible;
 }
+
+.boton-ver:hover{
+  color: rgba(255, 255, 255, 0.477);
+}
