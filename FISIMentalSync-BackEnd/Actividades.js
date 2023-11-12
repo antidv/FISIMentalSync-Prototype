@@ -22,25 +22,23 @@ document.addEventListener("DOMContentLoaded", async function () {
           const jsonData = data;
           document.querySelector('#bienvenida').textContent = `¡Bienvenido ${jsonData.nombre}!`;
 
-          const numeroReservas = 6;
+          const numeroReservas = 4;
           const tablaCitas = document.querySelector('.tabla-citas tbody');
 
           const columnasCita = document.querySelectorAll('.columna-cita');
 
-          for (let i = 0; i < numeroReservas; i++) {
+          for (let i = 1; i < numeroReservas; i++) {
             const fila = document.createElement('tr');
 
             const columnaNumeroReserva = document.createElement('td');
             columnaNumeroReserva.textContent = i + 1;
             fila.appendChild(columnaNumeroReserva);
 
-            // Itera sobre las columnas seleccionadas y clona su contenido
             columnasCita.forEach(columna => {
               const columnaClonada = columna.cloneNode(true);
               fila.appendChild(columnaClonada);
             });
 
-            // Agrega cada fila a la tabla
             tablaCitas.appendChild(fila);
           }
         } catch (error) {
