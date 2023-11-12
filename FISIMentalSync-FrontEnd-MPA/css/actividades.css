@@ -36,7 +36,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 40%; /* Establece el ancho aproximado al 40% */
+    flex-basis: 40%;
     height: 100px;
     width: 400px;
 }
@@ -51,26 +51,26 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 60%; /* Establece el ancho aproximado al 60% */
+    flex-basis: 60%; 
     height: 100px;
     width: 600px;
   }
   
 
   .columna-cita {
-    text-align: center; /* Alinea el contenido al centro */
-    padding: 5px; /* Añade un espacio interno alrededor del contenido */
-    border: 1px solid #ccc; /* Añade un borde para separar las celdas */
-    box-sizing: border-box; /* Incluye el borde en el tamaño total de la caja */
+    text-align: center;
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
   }
   
   .texto-cita {
-    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    margin: 0; 
   }
   
   .link-pop-up2 {
-    color: inherit; /* Hereda el color del texto del contenedor padre */
-    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; 
+    text-decoration: none; 
   }
   
   
