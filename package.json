@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node routes.js"
+    "start": "node ./API/routes.js"
   },
   "author": "",
   "license": "ISC",
