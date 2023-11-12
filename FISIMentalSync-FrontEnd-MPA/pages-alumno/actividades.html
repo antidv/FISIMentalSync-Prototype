@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Titulo -->
+  <title>Actividades - [alumno]</title>
+  <!-- Metadatos -->
+  <meta charset="utf-8">
+  <meta name="description" content="Perfil de alumno" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/App.css" />
+  <link rel="stylesheet" href="../css/barra-navegacion.css" />
+  <link rel="stylesheet" href="../css/actividades.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/9e15f108bc.js" crossorigin="anonymous"></script>
+</head> 
+
+<body>
+  <div id="App">
+    <main class="perfil">
+      <h1 id="bienvenida">¡Bienvenido Nombre Apellido!</h1>
+      <h2>Evaluaciones</h2>
+      <section class="contenedor-eva">
+        <p class="texto-etiqueta">Evaluación inicial</p>
+        <p class="texto-info" onclick="openPopup()">Link forms</p>
+        <p class="texto-etiqueta">Evaluación semestral</p>
+        <p class="texto-info" id="nombre-apellido" onclick="openPopup2()">Link forms</p>
+      </section>
+      <script>
+        function openPopup() {
+          window.open("https://www.google.com/", "popup", "width=400,height=400");
+        }
+        function openPopup2() {
+          window.open("https://www.example.com", "popup", "width=400,height=400");
+        }
+      
+      </script>      
+      <h2>Calendario de citas</h2>
+      <table id="miTabla" class="tabla-citas">
+        <thead>
+          <tr class="encabezado-tabla-citas">
+            <th>N°</th>
+            <th>Horario</th>
+            <th>Psicólogo</th>
+            <th>Asistencia</th>
+            <th>Diagnóstico</th>
+            <th>Satisfacción</th>
+          </tr>
+        </thead>
+        <tbody>          
+          <tr class="contenido-tabla-citas">
+            <td>1</td>
+            <td class="columna-cita">
+              <p class="texto-cita">
+                <a class="link-pop-up2" href="#">Ver</a>
+              </p>
+            </td>
+            <td class="columna-cita" id="nombre-psicologo">Nombre de psicólogo</td>
+            <td class="columna-cita">Pendiente</td>
+            <td class="columna-cita">Pendiente</td>
+            <td class="columna-cita">0/5</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </main>
+  </div>
+  <script language="JavaScript">
+    document.addEventListener("DOMContentLoaded", function() {
+      const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(3)');
+      perfilLi.classList.add('activo');
+    });
+  </script>
+  <script type="module" src="../../FISIMentalSync-BackEnd/Actividades.js"></script>
+  <script type="module" src="../js/App-alumno.js"></script>
+</body>
+</html>

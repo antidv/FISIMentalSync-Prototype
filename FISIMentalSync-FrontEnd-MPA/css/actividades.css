@@ -1,0 +1,133 @@
+@import './colors.css';
+
+.perfil{
+  display: grid;
+  gap: 1rem;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  background-color: var(--secondary1-200);
+  color: var(--neutral-100);
+  border-radius: 15px;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-eva{
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: auto auto auto auto;
+  border-radius: 10px;
+}
+
+.texto-etiqueta {
+    background-color: var(--neutral-500);
+    color: var(--secondary1-50);
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    border-radius: 20px;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 40%;
+    height: 100px;
+    width: 400px;
+}
+  
+  .texto-info {
+    background-color: var(--secondary1-100);
+    color: var(--neutral-100);
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    border-radius: 20px;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 60%; 
+    height: 100px;
+    width: 600px;
+  }
+  
+
+  .columna-cita {
+    text-align: center;
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+  }
+  
+  .texto-cita {
+    margin: 0; 
+  }
+  
+  .link-pop-up2 {
+    color: inherit; 
+    text-decoration: none; 
+  }
+  
+  
+  .contenedor-eva {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  
+.link-pop-up{
+  background-color: #FBB958;
+  color: var(--neutral-100);
+  border-radius: 8px;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabla-citas{
+  background-color: var(--neutral-50);
+  border-radius: 8px;
+  color: var(--white-50);
+  padding: 0 1rem 1rem 1rem;
+}
+
+.encabezado-tabla-citas{
+  color: var(--secondary1-200);
+  text-align: center;
+  height: 4rem;
+}
+
+.tabla-citas tbody tr {
+    border: 1px solid #ccc;
+  }
+  
+  .tabla-citas tbody td {
+    text-align: center; 
+    padding: 8px;
+  }
+  
+  .tabla-citas tbody td:first-child {
+    font-weight: bold; 
+  }
+  
+.contenido-tabla-citas{
+  text-align: center;
+  height: 4rem;
+}
+
+td:last-child{
+  border-right: 2px solid var(--secondary1-300);
+}
+
+td > a {
+  color: var(--white-50);
+}
+
