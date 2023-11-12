@@ -32,17 +32,18 @@
         <input type="text" id="alumno-apellido" placeholder="Apellido del alumno">
         <label for="alumno-correo">Correo:</label>
         <input type="email" id="alumno-correo" placeholder="Correo del alumno" required>
-
         <!--Agregado recientemente-->
         <label for="Codigo">Codigo:</label>
         <input type="text" id="alumno-codigo" placeholder="Codigo del alumno">
 
-        <label for="alumno-escuela">Escuela</label>
-        <select id="alumno-escuela" class="input-field" name="Escuela del alumno">
-        <option value="" disabled selected>Seleccione una escuela</option>
-        <option value="Software">Software</option>
-        <option value="Sistemas">Sistemas</option>
-        
+          <label for="Escuela">Escuela profesional:</label>
+          <select id="buscar" name="buscar">
+            <option value="" disabled selected>Seleccione una escuela</option>
+            <option value="Ingeniería-de-Software">Ingeniería de Software</option>
+            <option value="Ingeniería-Sistemas">Ingeniería Sistemas</option>
+          </select>
+    
+
         </select>
         <div id="boton-buscar-alumnos">    
        <button type="submit" id="BotonBuscarAlumnos">Buscar</button>

@@ -60,8 +60,9 @@ h2{
   .columna-cita {
     text-align: center;
     padding: 5px; 
-    border: 1px solid #ccc; 
+    border: 0.8px solid #c1c1c1; 
     box-sizing: border-box; 
+    border-radius: 10px;
   }
   
   .texto-cita {

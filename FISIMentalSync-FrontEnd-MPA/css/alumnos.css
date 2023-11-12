@@ -67,3 +67,12 @@ th {
 td:last-child{
   border-right: 2px solid var(--secondary1-300);
 }
+
+
+#buscar{
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  background-color: var(--secondary1-00);
+  border: 0.5px solid var(--neutral-50);
+  grid-template-columns: auto 85%;
+}

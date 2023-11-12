@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           document.querySelector('#bienvenida').textContent = `¡Bienvenido ${jsonData.nombre}!`;
 
           const numeroReservas = 4;
+          
           const tablaCitas = document.querySelector('.tabla-citas tbody');
 
           const columnasCita = document.querySelectorAll('.columna-cita');
