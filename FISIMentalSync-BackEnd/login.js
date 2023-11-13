@@ -1,4 +1,4 @@
-//Lógica login.js
+// Lógica login.js
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 contrasena: password
             }),
             mode: 'cors'
-  
         }).then(function(response) {
             if(response.ok) {
                 return response.json(); 
