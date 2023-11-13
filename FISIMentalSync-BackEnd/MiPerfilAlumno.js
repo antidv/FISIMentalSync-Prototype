@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function() {
+  
   const perfilLi = document.querySelector('.contenedor-listas-nav li:nth-child(2)');
   perfilLi.classList.add('activo');
  
