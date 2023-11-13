@@ -47,7 +47,7 @@
         <tbody>
           <tr class="contenido-tabla-citas">
             <td>1</td>
-            <td><a href="#" class="boton-ver">
+            <td><a href="#" class="boton-ver" id="boton-ver">
                 <p>Ver</p>
               </a></td>
             <td>Nombre de psicólogo</td>
@@ -57,7 +57,7 @@
           </tr>
           <tr class="contenido-tabla-citas">
             <td>1</td>
-            <td><a href="#">
+            <td><a href="#" class="boton-ver" id="boton-ver">
                 <p>Ver</p>
               </a></td>
             <td>Nombre de psicólogo</td>
@@ -67,7 +67,7 @@
           </tr>
           <tr class="contenido-tabla-citas">
             <td>1</td>
-            <td><a href="#">
+            <td><a href="#" class="boton-ver" id="boton-ver">
                 <p>Ver</p>
               </a></td>
             <td>Nombre de psicólogo</td>
@@ -78,6 +78,26 @@
         </tbody>
       </table>
     </main>
+  </div>
+  <div class="fondoPopup" id="fondoPopup">
+    <div class="popup" id="popup">
+      <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+      <table class="tabla-citas">
+        <thead>
+          <tr class="encabezado-tabla-citas">
+            <th>Mes</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+        </thead>
+        <tbody>
+          <tr class="encabezado-tabla-citas">
+            <td>Agosto</td>
+            <td>12/08/2021</td>
+            <td>10:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <script type="module" src="../js/App-psicologo.js"></script>
   <script type="module" src="../../FISIMentalSync-BackEnd/MiPerfilPsicologo.js"></script>

@@ -94,8 +94,8 @@ td > a {
   color: var(--white-50);
 }
 
-.fondo-pop-up{
-  background-color: rgba(0,0,0,0.3);
+.fondoPopup{
+  background-color: rgba(0,0,0,0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -104,11 +104,38 @@ td > a {
   display: flex;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
 }
 
-.fondo-pop-up.active{
+.fondoPopup.active{
   visibility: visible;
 }
+
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	padding: 20px;
+	text-align: center;
+  box-sizing: border-box;
+	opacity: 100;
+}
+
+.popup form .contenedor-inputs {
+	opacity: 100;
+}
+
+.popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+
+.popup.active {	transform: scale(1); opacity: 1; }
 
 .boton-ver:hover{
   color: rgba(255, 255, 255, 0.477);

@@ -33,5 +33,21 @@ document.addEventListener("DOMContentLoaded", async function() {
       }
     })
     .catch(error => console.error('Error:', error));
-  });
+});
+ 
+var btnAbrirPopup = document.getElementById('boton-ver'),
+	fondoPopup = document.getElementById('fondoPopup'),
+	popup = document.getElementById('popup'),
+	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+
+btnAbrirPopup.addEventListener('click', function(){
+	fondoPopup.classList.add('active');
+	popup.classList.add('active');
+});
+
+btnCerrarPopup.addEventListener('click', function(e){
+	e.preventDefault();
+	fondoPopup.classList.remove('active');
+  popup.classList.remove('active');
+});
   
