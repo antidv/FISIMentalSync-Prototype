@@ -58,6 +58,41 @@
   }
 </script>
 
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    fetch('http://localhost:3000/motivosConsultaMesEn/Sistemas')
+      .then(response => {
+        if (response.ok) return response.json();
+        throw new Error('Error en la solicitud de datos');
+      })
+      .then(data => {
+        console.log(data); // Imprime los datos para verificar
+
+        const dataTable = google.visualization.arrayToDataTable(data);
+
+        var options = {
+          title: 'Diagrama porcentual de motivos de consulta'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('patsispor'));
+        chart.draw(dataTable, options);
+
+        var optionsHist = {
+          title: 'Histograma de motivos de consulta',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chartHist = new google.visualization.LineChart(document.getElementById('patsishist'));
+        chartHist.draw(dataTable, optionsHist);
+      })
+      .catch(error => console.error('Error:', error));
+  }
+</script>
+
   <script type="text/javascript">
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
