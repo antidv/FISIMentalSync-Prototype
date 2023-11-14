@@ -28,18 +28,15 @@
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
-    fetch('http://localhost:3000/motivosConsultaMesSoft')
+    fetch('http://localhost:3000/motivosConsultaMesEn/Software')
       .then(response => {
         if (response.ok) return response.json();
         throw new Error('Error en la solicitud de datos');
       })
       .then(data => {
-        // Convertir todos los elementos numéricos a tipo Number
-        const formattedData = data.map(row => {
-          return row.map((item, index) => index > 0 ? Number(item) : item);
-        });
+        console.log(data); // Imprime los datos para verificar
 
-        const dataTable = google.visualization.arrayToDataTable(formattedData);
+        const dataTable = google.visualization.arrayToDataTable(data);
 
         var options = {
           title: 'Diagrama porcentual de motivos de consulta'

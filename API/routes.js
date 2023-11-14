@@ -147,7 +147,7 @@ app.get('/motivosConsultaMes', async (req, res) => {
   }
 });
 
-app.get('/motivosConsultaMesSoft', async (req, res) => {
+app.get('/motivosConsultaMesEn/:esc', async (req, res) => {
   try {
     const connectionInstance = await connection;
 
@@ -156,12 +156,12 @@ app.get('/motivosConsultaMesSoft', async (req, res) => {
       FROM Motivo_consulta m
       LEFT JOIN Diagnostico d ON m.idMotivoConsulta = d.idMotivoConsulta
       LEFT JOIN Alumno a ON d.idAlumno = a.idAlumno
-      WHERE a.escuela_prof LIKE '%Software%'
+      WHERE a.escuela_prof LIKE ?
       GROUP BY m.nombre
       ORDER BY Cantidad DESC    
     `;
 
-    const [result] = await connectionInstance.query(query);
+    const [result] = await connectionInstance.query(query, [`%${req.params.esc}%`]);
     const data = [['Motivos de Consulta', 'Cantidad de alumnos']].concat(
       result.map(row => [row.MotivoConsulta, row.Cantidad])
     );
