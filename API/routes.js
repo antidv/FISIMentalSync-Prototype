@@ -99,5 +99,79 @@ app.get('/psicologo/:correo', async (req, res) => {
   }
 });
 
+//Para las analíticas
+app.get('/analiticas', async (req, res) => {
+  try {
+    const connectionInstance = await connection;
+
+    const [cantAlumnos] = await connectionInstance.query('SELECT COUNT(*) AS cantAlumnos FROM Alumno');
+
+    const [cantCitas] = await connectionInstance.query('SELECT COUNT(*) AS cantCitas FROM Cita WHERE asistencia IS NOT NULL');
+
+    const [promedioGradoSatis] = await connectionInstance.query('SELECT AVG(grado_satis) AS promedioGradoSatis FROM Cita WHERE grado_satis IS NOT NULL');
+
+    res.json({
+      cantAlumnos: cantAlumnos[0].cantAlumnos,
+      cantCitas: cantCitas[0].cantCitas,
+      promedioGradoSatis: promedioGradoSatis[0].promedioGradoSatis
+    });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Hubo un error al ejecutar la consulta');
+  }
+});
+
+//falta limitar al mes
+app.get('/motivosConsultaMes', async (req, res) => {
+  try {
+    const connectionInstance = await connection;
+
+    const query = `
+      SELECT m.nombre AS MotivoConsulta, COUNT(d.idMotivoConsulta) AS Cantidad
+      FROM Motivo_consulta m
+      LEFT JOIN Diagnostico d ON m.idMotivoConsulta = d.idMotivoConsulta
+      GROUP BY m.nombre
+      ORDER BY Cantidad DESC
+    `;
+
+    const [result] = await connectionInstance.query(query);
+    const data = [['Motivos de Consulta', 'Cantidad de alumnos']].concat(
+      result.map(row => [row.MotivoConsulta, row.Cantidad])
+    );
+
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Hubo un error al ejecutar la consulta');
+  }
+});
+
+app.get('/motivosConsultaMesSoft', async (req, res) => {
+  try {
+    const connectionInstance = await connection;
+
+    const query = `
+      SELECT m.nombre AS MotivoConsulta, COUNT(d.idMotivoConsulta) AS Cantidad
+      FROM Motivo_consulta m
+      LEFT JOIN Diagnostico d ON m.idMotivoConsulta = d.idMotivoConsulta
+      LEFT JOIN Alumno a ON d.idAlumno = a.idAlumno
+      WHERE a.escuela_prof LIKE '%Software%'
+      GROUP BY m.nombre
+      ORDER BY Cantidad DESC    
+    `;
+
+    const [result] = await connectionInstance.query(query);
+    const data = [['Motivos de Consulta', 'Cantidad de alumnos']].concat(
+      result.map(row => [row.MotivoConsulta, row.Cantidad])
+    );
+
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Hubo un error al ejecutar la consulta');
+  }
+});
+
 app.listen(3000)
 console.log('Servidor corriendo en el puerto 3000')

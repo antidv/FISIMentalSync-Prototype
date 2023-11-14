@@ -3,14 +3,6 @@
   flex-wrap: wrap;
 }
 
-/*.cuadro {
-  width: 48%;
-  margin: 1%;
-  padding: 20px;
-  background-color: #FF5733; 
-  color: #2E2E2E; 
-}*/
-
 .GoogleCharts {
   display: flex;
   flex-direction: row;

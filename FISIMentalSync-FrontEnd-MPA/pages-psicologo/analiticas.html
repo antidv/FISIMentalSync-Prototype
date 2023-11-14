@@ -10,7 +10,7 @@
   <meta name="description" content="Perfil de psicologo" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- JS -->
-  <script src="FISIMentalSync-FrontEnd-MPA/js/analiticas.js"></script>
+  <script src="../js/analiticas.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="../css/App.css" />
   <link rel="stylesheet" href="../css/barra-navegacion.css" />
@@ -23,6 +23,44 @@
  <!-- Google Chart -->
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+ <script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    fetch('http://localhost:3000/motivosConsultaMesSoft')
+      .then(response => {
+        if (response.ok) return response.json();
+        throw new Error('Error en la solicitud de datos');
+      })
+      .then(data => {
+        // Convertir todos los elementos numéricos a tipo Number
+        const formattedData = data.map(row => {
+          return row.map((item, index) => index > 0 ? Number(item) : item);
+        });
+
+        const dataTable = google.visualization.arrayToDataTable(formattedData);
+
+        var options = {
+          title: 'Diagrama porcentual de motivos de consulta'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('patsoftpor'));
+        chart.draw(dataTable, options);
+
+        var optionsHist = {
+          title: 'Histograma de motivos de consulta',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chartHist = new google.visualization.LineChart(document.getElementById('patsofthist'));
+        chartHist.draw(dataTable, optionsHist);
+      })
+      .catch(error => console.error('Error:', error));
+  }
+</script>
+
   <script type="text/javascript">
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
@@ -30,37 +68,12 @@
     function drawChart() {
 
       var data = google.visualization.arrayToDataTable([
-        ['Patología', 'Cantidad de alumnos'],
-        ['Patología1',     11],
-        ['Patología2',      2],
-        ['Patología3',  2],
-        ['Patología3', 2],
-        ['Patología4',    7]
-      ]);
-
-      var options = {
-        title: 'Diagrama porcentual'
-      };
-
-      var chart = new google.visualization.PieChart(document.getElementById('patsoftpor'));
-
-      chart.draw(data, options);
-    }
-  </script>
-
-  <script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-      var data = google.visualization.arrayToDataTable([
-        ['Patología', 'Cantidad de alumnos'],
-        ['Patología1',     11],
-        ['Patología2',      2],
-        ['Patología3',  2],
-        ['Patología3', 2],
-        ['Patología4',    7]
+        ['Motivo de consulta ', 'Cantidad de alumnos'],
+        ['Motivo de consulta 1',     11],
+        ['Motivo de consulta 2',      2],
+        ['Motivo de consulta 3',  2],
+        ['Motivo de consulta 3', 2],
+        ['Motivo de consulta 4',    7]
       ]);
 
       var options = {
@@ -78,23 +91,31 @@
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
+    fetch('http://localhost:3000/motivosConsultaMes')
+      .then(response => {
+        if (response.ok) return response.json();
+        throw new Error('Error en la solicitud de datos');
+      })
+      .then(data => {
+        const dataTable = google.visualization.arrayToDataTable(data);
 
-    var data = google.visualization.arrayToDataTable([
-      ['Patología', 'Cantidad de alumnos'],
-      ['Patología1',     11],
-      ['Patología2',      2],
-      ['Patología3',  2],
-      ['Patología3', 2],
-      ['Patología4',    7]
-    ]);
+        var options = {
+          title: 'Diagrama porcentual de motivos de consulta'
+        };
 
-    var options = {
-      title: 'Diagrama porcentual'
-    };
+        var optionsHist = {
+          title: 'Histograma de motivos de consulta',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
 
-    var chart = new google.visualization.PieChart(document.getElementById('patmesfisipor'));
+        var chart = new google.visualization.PieChart(document.getElementById('patmesfisipor'));
+        chart.draw(dataTable, options);
 
-    chart.draw(data, options);
+        var chartHist = new google.visualization.LineChart(document.getElementById('patmesfisihist'));
+        chartHist.draw(dataTable, optionsHist);
+      })
+      .catch(error => console.error('Error:', error));
   }
 </script>
 
@@ -105,12 +126,12 @@
   function drawChart() {
 
     var data = google.visualization.arrayToDataTable([
-      ['Patología', 'Cantidad de alumnos'],
-      ['Patología1',     11],
-      ['Patología2',      2],
-      ['Patología3',  2],
-      ['Patología3', 2],
-      ['Patología4',    7]
+      ['Motivo de consulta ', 'Cantidad de alumnos'],
+      ['Motivo de consulta 1',     11],
+      ['Motivo de consulta 2',      2],
+      ['Motivo de consulta 3',  2],
+      ['Motivo de consulta 3', 2],
+      ['Motivo de consulta 4',    7]
     ]);
 
     var options = {
@@ -118,31 +139,6 @@
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('citmespor'));
-
-    chart.draw(data, options);
-  }
-</script>
-
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Year', 'Sales', 'Expenses'],
-      ['2004',  1000,      400],
-      ['2005',  1170,      460],
-      ['2006',  660,       1120],
-      ['2007',  1030,      540]
-    ]);
-
-    var options = {
-      title: 'Histograma',
-      curveType: 'function',
-      legend: { position: 'bottom' }
-    };
-
-    var chart = new google.visualization.LineChart(document.getElementById('patsofthist'));
 
     chart.draw(data, options);
   }
@@ -192,31 +188,6 @@
       legend: { position: 'bottom' }
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('patmesfisihist'));
-
-    chart.draw(data, options);
-  }
-</script>
-
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Year', 'Sales', 'Expenses'],
-      ['2004',  1000,      400],
-      ['2005',  1170,      460],
-      ['2006',  660,       1120],
-      ['2007',  1030,      540]
-    ]);
-
-    var options = {
-      title: 'Histograma',
-      curveType: 'function',
-      legend: { position: 'bottom' }
-    };
-
     var chart = new google.visualization.LineChart(document.getElementById('citmeshist'));
 
     chart.draw(data, options);
@@ -232,35 +203,35 @@
       <div class="analytics">
         <div class="stat">
           <h4>Total estudiantes</h4>
-          <div class="stat-number">5 237</div>
+          <div class="stat-number" id="cantAlumnos">9999</div>
         </div>
         <div class="stat">
           <h4>Citas atendidas</h4>
-          <div class="stat-number">456</div>
+          <div class="stat-number" id="cantCitas">999</div>
         </div>
         <div class="stat">
           <h4>Satisfacción promedio</h4>
-          <div class="stat-number">4</div>
+          <div class="stat-number" id="promedioGradoSatis">9</div>
         </div>
       </div>
 
       <div class="contenedor-cuadros">
         <div class="cuadro">
-          <h2 class="titulo">Patologías en Software</h2>
+          <h2 class="titulo">Motivos de consulta en Software</h2>
           <div class="GoogleCharts">
             <div class="Ggraph" id="patsoftpor"></div>
             <div class="Ggraph" id="patsofthist"></div>
           </div>
         </div>
         <div class="cuadro">
-          <h2 class="titulo">Patologías en Sistemas</h2>
+          <h2 class="titulo">Motivos de consulta en Sistemas</h2>
           <div class="GoogleCharts">
             <div class="Ggraph" id="patsispor"></div>
             <div class="Ggraph" id="patsishist"></div>
           </div>
         </div>
         <div class="cuadro">
-          <h2 class="titulo">Patologías por mes</h2>
+          <h2 class="titulo">Motivos de consulta por mes</h2>
           <div class="GoogleCharts">
             <div class="Ggraph" id="patmesfisipor"></div>
             <div class="Ggraph" id="patmesfisihist"></div>
